@@ -1,0 +1,3085 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="1.html.files/p' + i + '.html?s=40e654962ec5c45b" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="7619" height="1221" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:#FFFFFF;stroke:none; }
+				.s1 { fill:#FFF7E5;stroke:none; }
+				.s2 { stroke:#696969;stroke-width:2;stroke-linecap:square; }
+				.s3 { cursor:pointer; }
+				.s4 { fill:#92DDF9;stroke:none; }
+				.s5 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s6 { font-size:12px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s7 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s8 { fill:none;stroke:#606060;stroke-width:1; }
+				.s9 { fill:#FBD27A;stroke:none; }
+				.s10 { fill:#FF9368;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1"/>
+	<g id="g2">
+		<rect id="r6782" class="s0" x="0" y="0" width="7618" height="1221"/>
+		<rect id="r6783" class="s0" x="0" y="0" width="7619" height="62"/>
+		<rect id="r6784" class="s1" x="0" y="61" width="7619" height="96"/>
+		<rect id="r6785" class="s0" x="0" y="156" width="7619" height="96"/>
+		<rect id="r6786" class="s1" x="0" y="251" width="7619" height="96"/>
+		<rect id="r6787" class="s0" x="0" y="346" width="7619" height="113"/>
+		<rect id="r6788" class="s1" x="0" y="458" width="7619" height="112"/>
+		<rect id="r6789" class="s0" x="0" y="569" width="7619" height="152"/>
+		<rect id="r6790" class="s1" x="0" y="720" width="7619" height="120"/>
+		<rect id="r6791" class="s0" x="0" y="839" width="7619" height="114"/>
+		<rect id="r6792" class="s1" x="0" y="952" width="7619" height="113"/>
+		<rect id="r6793" class="s0" x="0" y="1064" width="7619" height="96"/>
+		<rect id="r6794" class="s1" x="0" y="1159" width="7619" height="62"/>
+	</g>
+	<g id="g3" transform="translate(12,12)">
+		<g id="g4">
+			<line id="l6595" class="s2" x1="4362" y1="175" x2="4382" y2="175"/>
+			<line id="l6596" class="s2" x1="4788" y1="175" x2="4808" y2="175"/>
+			<line id="l6597" class="s2" x1="5056" y1="175" x2="5076" y2="175"/>
+			<line id="l6598" class="s2" x1="4307" y1="270" x2="4327" y2="270"/>
+			<line id="l6599" class="s2" x1="609" y1="390" x2="746" y2="390"/>
+			<line id="l6600" class="s2" x1="454" y1="382" x2="474" y2="382"/>
+			<line id="l6601" class="s2" x1="135" y1="382" x2="155" y2="382"/>
+			<line id="l6602" class="s2" x1="5133" y1="374" x2="5163" y2="374"/>
+			<line id="l6603" class="s2" x1="4108" y1="365" x2="4128" y2="365"/>
+			<line id="l6604" class="s2" x1="4533" y1="365" x2="4553" y2="365"/>
+			<line id="l6605" class="s2" x1="4836" y1="365" x2="4856" y2="365"/>
+			<line id="l6606" class="s2" x1="911" y1="501" x2="941" y2="501"/>
+			<line id="l6607" class="s2" x1="2533" y1="501" x2="3685" y2="501"/>
+			<line id="l6608" class="s2" x1="696" y1="476" x2="716" y2="476"/>
+			<line id="l6609" class="s2" x1="3802" y1="485" x2="3822" y2="485"/>
+			<line id="l6610" class="s2" x1="4083" y1="485" x2="4103" y2="485"/>
+			<line id="l6611" class="s2" x1="5446" y1="493" x2="5476" y2="493"/>
+			<line id="l6612" class="s2" x1="5142" y1="477" x2="5162" y2="477"/>
+			<line id="l6613" class="s2" x1="1389" y1="605" x2="2482" y2="605"/>
+			<line id="l6614" class="s2" x1="5936" y1="613" x2="6734" y2="613"/>
+			<line id="l6615" class="s2" x1="1270" y1="587" x2="1290" y2="587"/>
+			<line id="l6616" class="s2" x1="5346" y1="596" x2="5366" y2="596"/>
+			<line id="l6617" class="s2" x1="2906" y1="588" x2="2926" y2="588"/>
+			<line id="l6618" class="s2" x1="3319" y1="587" x2="3339" y2="587"/>
+			<line id="l6619" class="s2" x1="3468" y1="588" x2="3488" y2="588"/>
+			<line id="l6620" class="s2" x1="3876" y1="596" x2="3896" y2="596"/>
+			<line id="l6621" class="s2" x1="6847" y1="587" x2="6867" y2="587"/>
+			<line id="l6622" class="s2" x1="7244" y1="596" x2="7264" y2="596"/>
+			<line id="l6623" class="s2" x1="5495" y1="587" x2="5515" y2="587"/>
+			<line id="l6624" class="s2" x1="3241" y1="762" x2="5610" y2="762"/>
+			<line id="l6625" class="s2" x1="6607" y1="745" x2="6627" y2="745"/>
+			<line id="l6626" class="s2" x1="995" y1="746" x2="1015" y2="746"/>
+			<line id="l6627" class="s2" x1="1242" y1="746" x2="1262" y2="746"/>
+			<line id="l6628" class="s2" x1="2132" y1="770" x2="2152" y2="770"/>
+			<line id="l6629" class="s2" x1="2325" y1="745" x2="2345" y2="745"/>
+			<line id="l6630" class="s2" x1="2908" y1="754" x2="2928" y2="754"/>
+			<line id="l6631" class="s2" x1="6740" y1="745" x2="6760" y2="745"/>
+			<line id="l6632" class="s2" x1="6137" y1="746" x2="6157" y2="746"/>
+			<line id="l6633" class="s2" x1="7493" y1="746" x2="7513" y2="746"/>
+			<line id="l6634" class="s2" x1="5289" y1="868" x2="5469" y2="868"/>
+			<line id="l6635" class="s2" x1="5143" y1="859" x2="5163" y2="859"/>
+			<line id="l6636" class="s2" x1="3824" y1="859" x2="3844" y2="859"/>
+			<line id="l6637" class="s2" x1="4274" y1="868" x2="4294" y2="868"/>
+			<line id="l6638" class="s2" x1="4559" y1="868" x2="4579" y2="868"/>
+			<line id="l6639" class="s2" x1="4858" y1="876" x2="4878" y2="876"/>
+			<line id="l6640" class="s2" x1="5518" y1="980" x2="5548" y2="980"/>
+			<line id="l6641" class="s2" x1="5203" y1="971" x2="5223" y2="971"/>
+			<line id="l6642" class="s2" x1="5239" y1="1083" x2="5259" y2="1083"/>
+			<line id="l6643" class="s2" x1="5533" y1="1099" x2="5553" y2="1099"/>
+			<line id="l6644" class="s2" x1="4714" y1="36.96875" x2="4714" y2="61.96875"/>
+			<line id="l6645" class="s2" x1="4437" y1="144" x2="4437" y2="156.90625"/>
+			<line id="l6646" class="s2" x1="4576" y1="144" x2="4576" y2="156.90625"/>
+			<line id="l6647" class="s2" x1="4714" y1="131.90625" x2="4714" y2="144"/>
+			<line id="l6648" class="s2" x1="4724" y1="144" x2="4724" y2="156.90625"/>
+			<line id="l6649" class="s2" x1="4992" y1="144" x2="4992" y2="156.90625"/>
+			<line id="l6650" class="s2" x1="4437" y1="144" x2="4992" y2="144"/>
+			<line id="l6651" class="s2" x1="4239" y1="239" x2="4239" y2="251.84375"/>
+			<line id="l6652" class="s2" x1="4372" y1="175" x2="4372" y2="239"/>
+			<line id="l6653" class="s2" x1="4437" y1="226.84375" x2="4437" y2="239"/>
+			<line id="l6654" class="s2" x1="4555" y1="239" x2="4555" y2="251.84375"/>
+			<line id="l6655" class="s2" x1="4239" y1="239" x2="4372" y2="239"/>
+			<line id="l6656" class="s2" x1="4437" y1="239" x2="4555" y2="239"/>
+			<line id="l6657" class="s2" x1="67" y1="334" x2="67" y2="346.78125"/>
+			<line id="l6658" class="s2" x1="304" y1="288.8125" x2="304" y2="334"/>
+			<line id="l6659" class="s2" x1="541" y1="334" x2="541" y2="346.78125"/>
+			<line id="l6660" class="s2" x1="813" y1="288.8125" x2="813" y2="346.78125"/>
+			<line id="l6661" class="s2" x1="3881" y1="288.8125" x2="3881" y2="346.78125"/>
+			<line id="l6662" class="s2" x1="4043" y1="334" x2="4043" y2="346.78125"/>
+			<line id="l6663" class="s2" x1="4311" y1="334" x2="4311" y2="346.78125"/>
+			<line id="l6664" class="s2" x1="4464" y1="334" x2="4464" y2="346.78125"/>
+			<line id="l6665" class="s2" x1="4555" y1="321.78125" x2="4555" y2="334"/>
+			<line id="l6666" class="s2" x1="4772" y1="334" x2="4772" y2="346.78125"/>
+			<line id="l6667" class="s2" x1="5067" y1="334" x2="5067" y2="346.78125"/>
+			<line id="l6668" class="s2" x1="4043" y1="334" x2="5067" y2="334"/>
+			<line id="l6669" class="s2" x1="67" y1="334" x2="541" y2="334"/>
+			<line id="l6670" class="s2" x1="464" y1="382" x2="464" y2="458.203125"/>
+			<line id="l6671" class="s2" x1="629" y1="446" x2="629" y2="458.203125"/>
+			<line id="l6672" class="s2" x1="677" y1="390" x2="677" y2="446"/>
+			<line id="l6673" class="s2" x1="843" y1="446" x2="843" y2="458.203125"/>
+			<line id="l6674" class="s2" x1="2485" y1="383.75" x2="2485" y2="458.203125"/>
+			<line id="l6675" class="s2" x1="3744" y1="446" x2="3744" y2="458.203125"/>
+			<line id="l6676" class="s2" x1="3881" y1="416.71875" x2="3881" y2="446"/>
+			<line id="l6677" class="s2" x1="4018" y1="446" x2="4018" y2="458.203125"/>
+			<line id="l6678" class="s2" x1="4921" y1="446" x2="4921" y2="458.203125"/>
+			<line id="l6679" class="s2" x1="5074" y1="446" x2="5074" y2="458.203125"/>
+			<line id="l6680" class="s2" x1="5148" y1="374" x2="5148" y2="446"/>
+			<line id="l6681" class="s2" x1="5375" y1="446" x2="5375" y2="458.203125"/>
+			<line id="l6682" class="s2" x1="5522" y1="383.75" x2="5522" y2="458.203125"/>
+			<line id="l6683" class="s2" x1="7136" y1="383.75" x2="7136" y2="458.203125"/>
+			<line id="l6684" class="s2" x1="4921" y1="446" x2="5375" y2="446"/>
+			<line id="l6685" class="s2" x1="3744" y1="446" x2="4018" y2="446"/>
+			<line id="l6686" class="s2" x1="629" y1="446" x2="843" y2="446"/>
+			<line id="l6687" class="s2" x1="511" y1="557" x2="511" y2="569.625"/>
+			<line id="l6688" class="s2" x1="666" y1="557" x2="666" y2="569.625"/>
+			<line id="l6689" class="s2" x1="818" y1="557" x2="818" y2="569.625"/>
+			<line id="l6690" class="s2" x1="926" y1="501" x2="926" y2="557"/>
+			<line id="l6691" class="s2" x1="966" y1="557" x2="966" y2="569.625"/>
+			<line id="l6692" class="s2" x1="1121" y1="557" x2="1121" y2="569.625"/>
+			<line id="l6693" class="s2" x1="1340" y1="557" x2="1340" y2="569.625"/>
+			<line id="l6694" class="s2" x1="2556" y1="557" x2="2556" y2="569.625"/>
+			<line id="l6695" class="s2" x1="2704" y1="557" x2="2704" y2="569.625"/>
+			<line id="l6696" class="s2" x1="2842" y1="557" x2="2842" y2="569.625"/>
+			<line id="l6697" class="s2" x1="3109" y1="501" x2="3109" y2="557"/>
+			<line id="l6698" class="s2" x1="3404" y1="557" x2="3404" y2="569.625"/>
+			<line id="l6699" class="s2" x1="3663" y1="557" x2="3663" y2="569.625"/>
+			<line id="l6700" class="s2" x1="3812" y1="485" x2="3812" y2="569.625"/>
+			<line id="l6701" class="s2" x1="5038" y1="557" x2="5038" y2="569.625"/>
+			<line id="l6702" class="s2" x1="5174" y1="557" x2="5174" y2="569.625"/>
+			<line id="l6703" class="s2" x1="5430" y1="557" x2="5430" y2="569.625"/>
+			<line id="l6704" class="s2" x1="5461" y1="493" x2="5461" y2="557"/>
+			<line id="l6705" class="s2" x1="5748" y1="557" x2="5748" y2="569.625"/>
+			<line id="l6706" class="s2" x1="5885" y1="557" x2="5885" y2="569.625"/>
+			<line id="l6707" class="s2" x1="6790" y1="557" x2="6790" y2="569.625"/>
+			<line id="l6708" class="s2" x1="7136" y1="511.65625" x2="7136" y2="557"/>
+			<line id="l6709" class="s2" x1="7180" y1="557" x2="7180" y2="569.625"/>
+			<line id="l6710" class="s2" x1="7482" y1="557" x2="7482" y2="569.625"/>
+			<line id="l6711" class="s2" x1="5038" y1="557" x2="5885" y2="557"/>
+			<line id="l6712" class="s2" x1="6790" y1="557" x2="7482" y2="557"/>
+			<line id="l6713" class="s2" x1="2556" y1="557" x2="3663" y2="557"/>
+			<line id="l6714" class="s2" x1="511" y1="557" x2="1340" y2="557"/>
+			<line id="l6715" class="s2" x1="939" y1="708" x2="939" y2="727.015625"/>
+			<line id="l6716" class="s2" x1="1280" y1="587" x2="1280" y2="708"/>
+			<line id="l6717" class="s2" x1="1331" y1="708" x2="1331" y2="727.015625"/>
+			<line id="l6718" class="s2" x1="1476" y1="708" x2="1476" y2="727.015625"/>
+			<line id="l6719" class="s2" x1="1621" y1="708" x2="1621" y2="727.015625"/>
+			<line id="l6720" class="s2" x1="1776" y1="718" x2="1776" y2="727.015625"/>
+			<line id="l6721" class="s2" x1="1909" y1="718" x2="1909" y2="727.015625"/>
+			<line id="l6722" class="s2" x1="1936" y1="605" x2="1936" y2="718"/>
+			<line id="l6723" class="s2" x1="2059" y1="718" x2="2059" y2="727.015625"/>
+			<line id="l6724" class="s2" x1="2208" y1="708" x2="2208" y2="727.015625"/>
+			<line id="l6725" class="s2" x1="2413" y1="718" x2="2413" y2="727.015625"/>
+			<line id="l6726" class="s2" x1="2558" y1="718" x2="2558" y2="727.015625"/>
+			<line id="l6727" class="s2" x1="2691" y1="718" x2="2691" y2="727.015625"/>
+			<line id="l6728" class="s2" x1="3001" y1="718" x2="3001" y2="727.015625"/>
+			<line id="l6729" class="s2" x1="3103" y1="604.625" x2="3103" y2="698"/>
+			<line id="l6730" class="s2" x1="3168" y1="718" x2="3168" y2="727.015625"/>
+			<line id="l6731" class="s2" x1="3404" y1="656.046875" x2="3404" y2="698"/>
+			<line id="l6732" class="s2" x1="5356" y1="596" x2="5356" y2="708"/>
+			<line id="l6733" class="s2" x1="5667" y1="708" x2="5667" y2="727.015625"/>
+			<line id="l6734" class="s2" x1="5818" y1="708" x2="5818" y2="727.015625"/>
+			<line id="l6735" class="s2" x1="5968" y1="708" x2="5968" y2="727.015625"/>
+			<line id="l6736" class="s2" x1="6225" y1="708" x2="6225" y2="727.015625"/>
+			<line id="l6737" class="s2" x1="6335" y1="613" x2="6335" y2="708"/>
+			<line id="l6738" class="s2" x1="6393" y1="715" x2="6393" y2="727.015625"/>
+			<line id="l6739" class="s2" x1="6684" y1="715" x2="6684" y2="727.015625"/>
+			<line id="l6740" class="s2" x1="6790" y1="656.046875" x2="6790" y2="701"/>
+			<line id="l6741" class="s2" x1="6857" y1="587" x2="6857" y2="715"/>
+			<line id="l6742" class="s2" x1="6976" y1="715" x2="6976" y2="727.015625"/>
+			<line id="l6743" class="s2" x1="7026" y1="623.078125" x2="7026" y2="701"/>
+			<line id="l6744" class="s2" x1="7134" y1="715" x2="7134" y2="727.015625"/>
+			<line id="l6745" class="s2" x1="7291" y1="715" x2="7291" y2="727.015625"/>
+			<line id="l6746" class="s2" x1="7436" y1="701" x2="7436" y2="727.015625"/>
+			<line id="l6747" class="s2" x1="6393" y1="715" x2="7291" y2="715"/>
+			<line id="l6748" class="s2" x1="939" y1="708" x2="1621" y2="708"/>
+			<line id="l6749" class="s2" x1="5667" y1="708" x2="6335" y2="708"/>
+			<line id="l6750" class="s2" x1="1776" y1="718" x2="2203" y2="718"/>
+			<line id="l6751" class="s2" x1="2213" y1="718" x2="3168" y2="718"/>
+			<line id="l6752" class="s2" x1="2208" y1="708" x2="5356" y2="708"/>
+			<line id="l6753" class="s2" x1="3103" y1="698" x2="3404" y2="698"/>
+			<line id="l6754" class="s2" x1="6790" y1="701" x2="6852" y2="701"/>
+			<line id="l6755" class="s2" x1="6862" y1="701" x2="7436" y2="701"/>
+			<line id="l6756" class="s2" x1="3625" y1="832" x2="3625" y2="841.4375"/>
+			<line id="l6757" class="s2" x1="3903" y1="832" x2="3903" y2="841.4375"/>
+			<line id="l6758" class="s2" x1="4044" y1="832" x2="4044" y2="841.4375"/>
+			<line id="l6759" class="s2" x1="4360" y1="832" x2="4360" y2="841.4375"/>
+			<line id="l6760" class="s2" x1="4425" y1="762" x2="4425" y2="832"/>
+			<line id="l6761" class="s2" x1="4502" y1="832" x2="4502" y2="841.4375"/>
+			<line id="l6762" class="s2" x1="4785" y1="832" x2="4785" y2="841.4375"/>
+			<line id="l6763" class="s2" x1="4936" y1="822" x2="4936" y2="841.4375"/>
+			<line id="l6764" class="s2" x1="5226" y1="832" x2="5226" y2="841.4375"/>
+			<line id="l6765" class="s2" x1="6617" y1="745" x2="6617" y2="822"/>
+			<line id="l6766" class="s2" x1="3625" y1="832" x2="4931" y2="832"/>
+			<line id="l6767" class="s2" x1="4941" y1="832" x2="5226" y2="832"/>
+			<line id="l6768" class="s2" x1="4936" y1="822" x2="6617" y2="822"/>
+			<line id="l6769" class="s2" x1="5153" y1="859" x2="5153" y2="952.859375"/>
+			<line id="l6770" class="s2" x1="5379" y1="868" x2="5379" y2="940"/>
+			<line id="l6771" class="s2" x1="5459" y1="940" x2="5459" y2="952.859375"/>
+			<line id="l6772" class="s2" x1="5379" y1="940" x2="5459" y2="940"/>
+			<line id="l6773" class="s2" x1="5178" y1="1052" x2="5178" y2="1064.28125"/>
+			<line id="l6774" class="s2" x1="5472" y1="1052" x2="5472" y2="1064.28125"/>
+			<line id="l6775" class="s2" x1="5533" y1="980" x2="5533" y2="1052"/>
+			<line id="l6776" class="s2" x1="5888" y1="1052" x2="5888" y2="1064.28125"/>
+			<line id="l6777" class="s2" x1="5178" y1="1052" x2="5888" y2="1052"/>
+			<line id="l6778" class="s2" x1="5748" y1="1101.25" x2="5748" y2="1147"/>
+			<line id="l6779" class="s2" x1="5809" y1="1147" x2="5809" y2="1159.21875"/>
+			<line id="l6780" class="s2" x1="5888" y1="1134.21875" x2="5888" y2="1147"/>
+			<line id="l6781" class="s2" x1="5748" y1="1147" x2="5888" y2="1147"/>
+		</g>
+		<g id="g5">
+			<g id="g304">
+				<g id="g305" transform="translate(4681.9091796875,0)">
+					<g id="g306">
+						<g id="g307">
+							<g id="g308">
+								<g id="g309" at:id="2683" class="s3" onclick="nodeclick(2683)">
+									<g id="g5225">
+										<rect id="r5226" class="s4" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+										<g id="t5228" transform="translate(3,3)">
+											<text id="ts5229" x="9" y="11.484375" class="s5">Айтуган</text>
+											<text id="ts5230" x="0" y="27.96875" class="s6">Пра(8)дед</text>
+										</g>
+										<polygon id="p5227" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5231" class="s8" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g302" transform="translate(0,61.96875)">
+				<g id="g303" transform="translate(4658.099609375,0)">
+					<g id="g310">
+						<g id="g311">
+							<g id="g312">
+								<g id="g313" at:id="2682" class="s3" onclick="nodeclick(2682)">
+									<g id="g5232">
+										<rect id="r5233" class="s4" x="0.5" y="0.5" width="111.037109375" height="68.9375"/>
+										<g id="t5235" transform="translate(3,3)">
+											<text id="ts5236" x="9" y="11.484375" class="s5">Айтуганов Ибраш</text>
+											<text id="ts5237" x="26.5517578125" y="27.96875" class="s5">(1680 - ?)</text>
+											<text id="ts5238" x="23.748046875" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5239" x="23.8095703125" y="60.9375" class="s6">Пра(7)дед</text>
+										</g>
+										<polygon id="p5234" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5240" class="s8" x="0.5" y="0.5" width="111.037109375" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g300" transform="translate(0,156.90625)">
+				<g id="g301" transform="translate(4303.078125,0)">
+					<g id="g314">
+						<g id="g315">
+							<g id="g318">
+								<g id="g319" at:id="2699" class="s3" onclick="nodeclick(2699)">
+									<g id="g5241" clip-path="url(#g5249)">
+										<rect id="r5242" class="s9" x="0.5" y="0.5" width="57.93359375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5244" transform="translate(3,3)">
+											<text id="ts5245" x="21.017578125" y="11.484375" class="s5">...</text>
+											<text id="ts5246" x="0" y="27.96875" class="s5">(1728 - ?)</text>
+										</g>
+										<polygon id="p5243" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5247" class="s8" x="0.5" y="0.5" width="57.93359375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5249">
+											<rect id="r5250" class="s0" x="0.5" y="0.5" width="57.93359375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g316" transform="translate(78.93359375,0)">
+								<g id="g317" at:id="2648" class="s3" onclick="nodeclick(2648)">
+									<g id="g5251">
+										<rect id="r5252" class="s4" x="0.5" y="0.5" width="108.23046875" height="68.9375"/>
+										<g id="t5254" transform="translate(3,3)">
+											<text id="ts5255" x="9" y="11.484375" class="s5">Ибрашев Исмаил</text>
+											<text id="ts5256" x="25.1484375" y="27.96875" class="s5">(1723 - ?)</text>
+											<text id="ts5257" x="22.3447265625" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5258" x="22.40625" y="60.9375" class="s6">Пра(6)дед</text>
+										</g>
+										<polygon id="p5253" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5259" class="s8" x="0.5" y="0.5" width="108.23046875" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g320" transform="translate(208.1640625,0)">
+						<g id="g321">
+							<g id="g322">
+								<g id="g323" at:id="2694" class="s3" onclick="nodeclick(2694)">
+									<g id="g5260">
+										<rect id="r5261" class="s4" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+										<g id="t5263" transform="translate(3,3)">
+											<text id="ts5264" x="16.8662109375" y="11.484375" class="s5">Ибрашев Сафар</text>
+											<text id="ts5265" x="24.55078125" y="27.96875" class="s5">(1725 - 1752)</text>
+											<text id="ts5266" x="32.0068359375" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5267" x="0" y="60.9375" class="s6">2-юродный пра(6)дед</text>
+										</g>
+										<polygon id="p5262" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5268" class="s8" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g324" transform="translate(356.71875,0)">
+						<g id="g325">
+							<g id="g326">
+								<g id="g327" at:id="2695" class="s3" onclick="nodeclick(2695)">
+									<g id="g5269">
+										<rect id="r5270" class="s4" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+										<g id="t5272" transform="translate(3,3)">
+											<text id="ts5273" x="19.798828125" y="11.484375" class="s5">Ибрашев Юсуп</text>
+											<text id="ts5274" x="34.810546875" y="27.96875" class="s5">(1727 - ?)</text>
+											<text id="ts5275" x="32.0068359375" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5276" x="0" y="60.9375" class="s6">2-юродный пра(6)дед</text>
+										</g>
+										<polygon id="p5271" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5277" class="s8" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g328" transform="translate(148.5546875,0)">
+								<g id="g329" at:id="2710" class="s3" onclick="nodeclick(2710)">
+									<g id="g5278" clip-path="url(#g5286)">
+										<rect id="r5279" class="s9" x="0.5" y="0.5" width="97.98046875" height="35.96875" rx="10" ry="10"/>
+										<g id="t5281" transform="translate(3,3)">
+											<text id="ts5282" x="13" y="11.484375" class="s5">Абрамасова ...</text>
+											<text id="ts5283" x="20.0234375" y="27.96875" class="s5">(1737 - ?)</text>
+										</g>
+										<polygon id="p5280" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5284" class="s8" x="0.5" y="0.5" width="97.98046875" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5286">
+											<rect id="r5287" class="s0" x="0.5" y="0.5" width="97.98046875" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g330" transform="translate(624.25390625,0)">
+						<g id="g331">
+							<g id="g332">
+								<g id="g333" at:id="2696" class="s3" onclick="nodeclick(2696)">
+									<g id="g5288">
+										<rect id="r5289" class="s4" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+										<g id="t5291" transform="translate(3,3)">
+											<text id="ts5292" x="11.455078125" y="11.484375" class="s5">Ибрашев Имангул</text>
+											<text id="ts5293" x="34.810546875" y="27.96875" class="s5">(1733 - ?)</text>
+											<text id="ts5294" x="32.0068359375" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5295" x="0" y="60.9375" class="s6">2-юродный пра(6)дед</text>
+										</g>
+										<polygon id="p5290" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5296" class="s8" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g334" transform="translate(148.5546875,0)">
+								<g id="g335" at:id="2701" class="s3" onclick="nodeclick(2701)">
+									<g id="g5297" clip-path="url(#g5305)">
+										<rect id="r5298" class="s9" x="0.5" y="0.5" width="145.27734375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5300" transform="translate(3,3)">
+											<text id="ts5301" x="13" y="11.484375" class="s5">Ибрашена? Гульсултан</text>
+											<text id="ts5302" x="43.671875" y="27.96875" class="s5">(1732 - ?)</text>
+										</g>
+										<polygon id="p5299" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5303" class="s8" x="0.5" y="0.5" width="145.27734375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5305">
+											<rect id="r5306" class="s0" x="0.5" y="0.5" width="145.27734375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g20" transform="translate(0,251.84375)">
+				<g id="g21" transform="translate(272.076171875,0)">
+					<g id="g22">
+						<g id="g23">
+							<g id="g24">
+								<g id="g25" at:id="2011" class="s3" onclick="nodeclick(2011)">
+									<g id="g5307">
+										<rect id="r5308" class="s4" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+										<g id="t5310" transform="translate(3,3)">
+											<text id="ts5311" x="12.78515625" y="11.484375" class="s5">Хамет</text>
+											<text id="ts5312" x="0" y="27.96875" class="s6">Пра(5)дед</text>
+										</g>
+										<polygon id="p5309" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5313" class="s8" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g212" transform="translate(781.00390625,0)">
+					<g id="g213">
+						<g id="g214">
+							<g id="g215">
+								<g id="g216" at:id="795" class="s3" onclick="nodeclick(795)">
+									<g id="g5314">
+										<rect id="r5315" class="s4" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+										<g id="t5317" transform="translate(3,3)">
+											<text id="ts5318" x="9" y="11.484375" class="s5">Демей?</text>
+											<text id="ts5319" x="0" y="27.96875" class="s6">Пра(5)дед</text>
+										</g>
+										<polygon id="p5316" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5320" class="s8" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g267" transform="translate(3848.740234375,0)">
+					<g id="g268">
+						<g id="g269">
+							<g id="g270">
+								<g id="g271" at:id="112" class="s3" onclick="nodeclick(112)">
+									<g id="g5321">
+										<rect id="r5322" class="s4" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+										<g id="t5324" transform="translate(3,3)">
+											<text id="ts5325" x="12.64453125" y="11.484375" class="s5">Абдул</text>
+											<text id="ts5326" x="0" y="27.96875" class="s6">Пра(5)дед</text>
+										</g>
+										<polygon id="p5323" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5327" class="s8" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g299" transform="translate(4171.19970703125,0)">
+					<g id="g336">
+						<g id="g337">
+							<g id="g338">
+								<g id="g339" at:id="2697" class="s3" onclick="nodeclick(2697)">
+									<g id="g5328">
+										<rect id="r5329" class="s4" x="0.5" y="0.5" width="134.36328125" height="68.9375"/>
+										<g id="t5331" transform="translate(3,3)">
+											<text id="ts5332" x="9" y="11.484375" class="s5">Исмаилов Ишмухамет</text>
+											<text id="ts5333" x="38.21484375" y="27.96875" class="s5">(1749 - ?)</text>
+											<text id="ts5334" x="35.4111328125" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5335" x="3.404296875" y="60.9375" class="s6">2-юродный пра(5)дед</text>
+										</g>
+										<polygon id="p5330" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5336" class="s8" x="0.5" y="0.5" width="134.36328125" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g340" transform="translate(155.36328125,0)">
+								<g id="g341" at:id="2709" class="s3" onclick="nodeclick(2709)">
+									<g id="g5337" clip-path="url(#g5345)">
+										<rect id="r5338" class="s9" x="0.5" y="0.5" width="139.7109375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5340" transform="translate(3,3)">
+											<text id="ts5341" x="13" y="11.484375" class="s5">Шарипова Мурсалима</text>
+											<text id="ts5342" x="40.888671875" y="27.96875" class="s5">(1776 - ?)</text>
+										</g>
+										<polygon id="p5339" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5343" class="s8" x="0.5" y="0.5" width="139.7109375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5345">
+											<rect id="r5346" class="s0" x="0.5" y="0.5" width="139.7109375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g342" transform="translate(316.07421875,0)">
+						<g id="g343">
+							<g id="g344">
+								<g id="g345" at:id="2647" class="s3" onclick="nodeclick(2647)">
+									<g id="g5347">
+										<rect id="r5348" class="s4" x="0.5" y="0.5" width="135.330078125" height="68.9375"/>
+										<g id="t5350" transform="translate(3,3)">
+											<text id="ts5351" x="9" y="11.484375" class="s5">Исмагилов Ермухамет</text>
+											<text id="ts5352" x="11.7041015625" y="27.96875" class="s5">(1765 - 16.06.1839)</text>
+											<text id="ts5353" x="35.89453125" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5354" x="35.9560546875" y="60.9375" class="s6">Пра(5)дед</text>
+										</g>
+										<polygon id="p5349" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5355" class="s8" x="0.5" y="0.5" width="135.330078125" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g18" transform="translate(0,346.78125)">
+				<g id="g19">
+					<g id="g26">
+						<g id="g27">
+							<g id="g28">
+								<g id="g29" at:id="2015" class="s3" onclick="nodeclick(2015)">
+									<g id="g5356">
+										<rect id="r5357" class="s4" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+										<g id="t5359" transform="translate(3,3)">
+											<text id="ts5360" x="9" y="11.484375" class="s5">Хаметев Абдулвалит</text>
+											<text id="ts5361" x="37.8544921875" y="27.96875" class="s5">(1788 - ?)</text>
+											<text id="ts5362" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5363" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5364" x="3.0439453125" y="77.421875" class="s6">2-юродный пра(4)дед</text>
+										</g>
+										<polygon id="p5358" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5365" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g30" transform="translate(154.642578125,0)">
+								<g id="g31" at:id="111" class="s3" onclick="nodeclick(111)">
+									<g id="g5366" clip-path="url(#g5376)">
+										<rect id="r5367" class="s9" x="0.5" y="0.5" width="133.642578125" height="68.9375" rx="10" ry="10"/>
+										<g id="t5369" transform="translate(3,3)">
+											<text id="ts5370" x="13" y="11.484375" class="s5">Абдрашитова Минха</text>
+											<text id="ts5371" x="37.8544921875" y="27.96875" class="s5">(1804 - ?)</text>
+											<text id="ts5372" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5373" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+										</g>
+										<polygon id="p5368" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5374" class="s8" x="0.5" y="0.5" width="133.642578125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5376">
+											<rect id="r5377" class="s0" x="0.5" y="0.5" width="133.642578125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g32" transform="translate(309.28515625,0)">
+						<g id="g33">
+							<g id="g36">
+								<g id="g37" at:id="1728" class="s3" onclick="nodeclick(1728)">
+									<g id="g5378" clip-path="url(#g5388)">
+										<rect id="r5379" class="s9" x="0.5" y="0.5" width="143.642578125" height="68.9375" rx="10" ry="10"/>
+										<g id="t5381" transform="translate(3,3)">
+											<text id="ts5382" x="13" y="11.484375" class="s5">Сайфутдинова Фатима</text>
+											<text id="ts5383" x="42.8544921875" y="27.96875" class="s5">(1809 - ?)</text>
+											<text id="ts5384" x="5" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5385" x="53.6826171875" y="60.9375" class="s5">Амзя)</text>
+										</g>
+										<polygon id="p5380" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5386" class="s8" x="0.5" y="0.5" width="143.642578125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5388">
+											<rect id="r5389" class="s0" x="0.5" y="0.5" width="143.642578125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g34" transform="translate(164.642578125,0)">
+								<g id="g35" at:id="2016" class="s3" onclick="nodeclick(2016)">
+									<g id="g5390">
+										<rect id="r5391" class="s4" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+										<g id="t5393" transform="translate(3,3)">
+											<text id="ts5394" x="24.29296875" y="11.484375" class="s5">Хаметев Сагит</text>
+											<text id="ts5395" x="27.5947265625" y="27.96875" class="s5">(1783 - 1847)</text>
+											<text id="ts5396" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5397" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5398" x="35.1123046875" y="77.421875" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5392" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5399" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g211" transform="translate(745.8916015625,0)">
+					<g id="g217">
+						<g id="g218">
+							<g id="g219">
+								<g id="g220" at:id="796" class="s3" onclick="nodeclick(796)">
+									<g id="g5400" clip-path="url(#g5411)">
+										<rect id="r5401" class="s9" x="0.5" y="0.5" width="133.642578125" height="85.421875" rx="10" ry="10"/>
+										<g id="t5403" transform="translate(3,3)">
+											<text id="ts5404" x="19.107421875" y="11.484375" class="s5">Демьёва Рахима</text>
+											<text id="ts5405" x="37.8544921875" y="27.96875" class="s5">(1786 - ?)</text>
+											<text id="ts5406" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5407" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5408" x="21.6298828125" y="77.421875" class="s6">Пра(4)бабушка</text>
+										</g>
+										<polygon id="p5402" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5409" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5411">
+											<rect id="r5412" class="s0" x="0.5" y="0.5" width="133.642578125" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g228" transform="translate(2448.01123046875,0)">
+					<g id="g229">
+						<g id="g230">
+							<g id="g231">
+								<g id="g232" at:id="2044" class="s3" onclick="nodeclick(2044)">
+									<g id="g5413">
+										<rect id="r5414" class="s4" x="0.5" y="0.5" width="72.72265625" height="35.96875"/>
+										<g id="t5416" transform="translate(3,3)">
+											<text id="ts5417" x="9" y="11.484375" class="s5">Хисмутдин</text>
+											<text id="ts5418" x="4.65234375" y="27.96875" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5415" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5419" class="s8" x="0.5" y="0.5" width="72.72265625" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g266" transform="translate(3812.7958984375,0)">
+					<g id="g272">
+						<g id="g273">
+							<g id="g274">
+								<g id="g275" at:id="149" class="s3" onclick="nodeclick(149)">
+									<g id="g5420">
+										<rect id="r5421" class="s4" x="0.5" y="0.5" width="135.306640625" height="68.9375"/>
+										<g id="t5423" transform="translate(3,3)">
+											<text id="ts5424" x="9" y="11.484375" class="s5">Абдулов Габдулрахим</text>
+											<text id="ts5425" x="38.6865234375" y="27.96875" class="s5">(1778 - ?)</text>
+											<text id="ts5426" x="30.75" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts5427" x="35.9443359375" y="60.9375" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5422" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5428" class="s8" x="0.5" y="0.5" width="135.306640625" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g298" transform="translate(3979.1025390625,0)">
+					<g id="g346">
+						<g id="g347">
+							<g id="g348">
+								<g id="g349" at:id="2668" class="s3" onclick="nodeclick(2668)">
+									<g id="g5429">
+										<rect id="r5430" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5432" transform="translate(3,3)">
+											<text id="ts5433" x="25.458984375" y="11.484375" class="s5">Ермухаметов</text>
+											<text id="ts5434" x="24.9052734375" y="27.96875" class="s5">Деньмухамет</text>
+											<text id="ts5435" x="34.810546875" y="44.453125" class="s5">(1795 - ?)</text>
+											<text id="ts5436" x="32.0068359375" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5437" x="0" y="77.421875" class="s6">2-юродный пра(4)дед</text>
+										</g>
+										<polygon id="p5431" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5438" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g350" transform="translate(148.5546875,0)">
+								<g id="g351" at:id="2669" class="s3" onclick="nodeclick(2669)">
+									<g id="g5439" clip-path="url(#g5447)">
+										<rect id="r5440" class="s9" x="0.5" y="0.5" width="98.12109375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5442" transform="translate(3,3)">
+											<text id="ts5443" x="13" y="11.484375" class="s5">Исаева Рябига</text>
+											<text id="ts5444" x="20.09375" y="27.96875" class="s5">(1811 - ?)</text>
+										</g>
+										<polygon id="p5441" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5445" class="s8" x="0.5" y="0.5" width="98.12109375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5447">
+											<rect id="r5448" class="s0" x="0.5" y="0.5" width="98.12109375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g352" transform="translate(267.67578125,0)">
+						<g id="g353">
+							<g id="g354">
+								<g id="g355" at:id="2703" class="s3" onclick="nodeclick(2703)">
+									<g id="g5449">
+										<rect id="r5450" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5452" transform="translate(3,3)">
+											<text id="ts5453" x="25.458984375" y="11.484375" class="s5">Ермухаметов</text>
+											<text id="ts5454" x="17.6630859375" y="27.96875" class="s5">Мухаметдаминь</text>
+											<text id="ts5455" x="34.810546875" y="44.453125" class="s5">(1795 - ?)</text>
+											<text id="ts5456" x="32.0068359375" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5457" x="0" y="77.421875" class="s6">2-юродный пра(4)дед</text>
+										</g>
+										<polygon id="p5451" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5458" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g356" transform="translate(416.23046875,0)">
+						<g id="g357">
+							<g id="g358">
+								<g id="g359" at:id="2651" class="s3" onclick="nodeclick(2651)">
+									<g id="g5459">
+										<rect id="r5460" class="s4" x="0.5" y="0.5" width="136.361328125" height="68.9375"/>
+										<g id="t5462" transform="translate(3,3)">
+											<text id="ts5463" x="9" y="11.484375" class="s5">Ермухаметов Ибрагим</text>
+											<text id="ts5464" x="12.2197265625" y="27.96875" class="s5">(1800 - 29.10.1877)</text>
+											<text id="ts5465" x="36.41015625" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5466" x="4.4033203125" y="60.9375" class="s6">2-юродный пра(4)дед</text>
+										</g>
+										<polygon id="p5461" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5467" class="s8" x="0.5" y="0.5" width="136.361328125" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g360" transform="translate(157.361328125,0)">
+								<g id="g361" at:id="2653" class="s3" onclick="nodeclick(2653)">
+									<g id="g5468" clip-path="url(#g5476)">
+										<rect id="r5469" class="s9" x="0.5" y="0.5" width="133.65234375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5471" transform="translate(3,3)">
+											<text id="ts5472" x="13" y="11.484375" class="s5">Абдразакова Фатима</text>
+											<text id="ts5473" x="37.859375" y="27.96875" class="s5">(1797 - ?)</text>
+										</g>
+										<polygon id="p5470" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5474" class="s8" x="0.5" y="0.5" width="133.65234375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5476">
+											<rect id="r5477" class="s0" x="0.5" y="0.5" width="133.65234375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g362" transform="translate(728.244140625,0)">
+						<g id="g363">
+							<g id="g364">
+								<g id="g365" at:id="2652" class="s3" onclick="nodeclick(2652)">
+									<g id="g5478">
+										<rect id="r5479" class="s4" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+										<g id="t5481" transform="translate(3,3)">
+											<text id="ts5482" x="9" y="11.484375" class="s5">Ермухаметов Ильяс</text>
+											<text id="ts5483" x="34.810546875" y="27.96875" class="s5">(1813 - ?)</text>
+											<text id="ts5484" x="32.0068359375" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5485" x="0" y="60.9375" class="s6">2-юродный пра(4)дед</text>
+										</g>
+										<polygon id="p5480" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5486" class="s8" x="0.5" y="0.5" width="127.5546875" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g366" transform="translate(148.5546875,0)">
+								<g id="g367" at:id="2661" class="s3" onclick="nodeclick(2661)">
+									<g id="g5487" clip-path="url(#g5495)">
+										<rect id="r5488" class="s9" x="0.5" y="0.5" width="125.197265625" height="35.96875" rx="10" ry="10"/>
+										<g id="t5490" transform="translate(3,3)">
+											<text id="ts5491" x="13" y="11.484375" class="s5">Имангулова Ряухия</text>
+											<text id="ts5492" x="33.6318359375" y="27.96875" class="s5">(1811 - ?)</text>
+										</g>
+										<polygon id="p5489" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5493" class="s8" x="0.5" y="0.5" width="125.197265625" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5495">
+											<rect id="r5496" class="s0" x="0.5" y="0.5" width="125.197265625" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g368" transform="translate(1022.99609375,0)">
+						<g id="g369">
+							<g id="g370">
+								<g id="g371" at:id="2639" class="s3" onclick="nodeclick(2639)">
+									<g id="g5497">
+										<rect id="r5498" class="s4" x="0.5" y="0.5" width="129.798828125" height="68.9375"/>
+										<g id="t5500" transform="translate(3,3)">
+											<text id="ts5501" x="9" y="11.484375" class="s5">Ермухаметов Юлдаш</text>
+											<text id="ts5502" x="35.9326171875" y="27.96875" class="s5">(1786 - ?)</text>
+											<text id="ts5503" x="33.12890625" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5504" x="33.1904296875" y="60.9375" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5499" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5505" class="s8" x="0.5" y="0.5" width="129.798828125" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g428" transform="translate(5162.8974609375,0)">
+					<g id="g429">
+						<g id="g430">
+							<g id="g431">
+								<g id="g432" at:id="2649" class="s3" onclick="nodeclick(2649)">
+									<g id="g5506" clip-path="url(#g5515)">
+										<rect id="r5507" class="s9" x="0.5" y="0.5" width="90.3828125" height="52.453125" rx="10" ry="10"/>
+										<g id="t5509" transform="translate(3,3)">
+											<text id="ts5510" x="20.583984375" y="11.484375" class="s5">Фанифа</text>
+											<text id="ts5511" x="16.224609375" y="27.96875" class="s5">(1796 - ?)</text>
+											<text id="ts5512" x="0" y="44.453125" class="s6">Пра(4)бабушка</text>
+										</g>
+										<polygon id="p5508" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5513" class="s8" x="0.5" y="0.5" width="90.3828125" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5515">
+											<rect id="r5516" class="s0" x="0.5" y="0.5" width="90.3828125" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g434" transform="translate(5487.845703125,0)">
+					<g id="g435">
+						<g id="g436">
+							<g id="g437">
+								<g id="g438" at:id="2940" class="s3" onclick="nodeclick(2940)">
+									<g id="g5517">
+										<rect id="r5518" class="s4" x="0.5" y="0.5" width="67.7890625" height="35.96875"/>
+										<g id="t5520" transform="translate(3,3)">
+											<text id="ts5521" x="9" y="11.484375" class="s5">Абдрахим</text>
+											<text id="ts5522" x="2.185546875" y="27.96875" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5519" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5523" class="s8" x="0.5" y="0.5" width="67.7890625" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g445" transform="translate(7103.75830078125,0)">
+					<g id="g446">
+						<g id="g447">
+							<g id="g448">
+								<g id="g449" at:id="2090" class="s3" onclick="nodeclick(2090)">
+									<g id="g5524">
+										<rect id="r5525" class="s4" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+										<g id="t5527" transform="translate(3,3)">
+											<text id="ts5528" x="10.5703125" y="11.484375" class="s5">Шабай</text>
+											<text id="ts5529" x="0" y="27.96875" class="s6">Пра(4)дед</text>
+										</g>
+										<polygon id="p5526" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5530" class="s8" x="0.5" y="0.5" width="63.4179725646973" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g16" transform="translate(0,458.203125)">
+				<g id="g38" transform="translate(396.6064453125,0)">
+					<g id="g39">
+						<g id="g40">
+							<g id="g41">
+								<g id="g42" at:id="1707" class="s3" onclick="nodeclick(1707)">
+									<g id="g5531">
+										<rect id="r5532" class="s4" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+										<g id="t5534" transform="translate(3,3)">
+											<text id="ts5535" x="9" y="11.484375" class="s5">Сагитов Мухаметгата</text>
+											<text id="ts5536" x="37.8544921875" y="27.96875" class="s5">(1841 - ?)</text>
+											<text id="ts5537" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5538" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5539" x="3.0439453125" y="77.421875" class="s6">2-юродный пра(3)дед</text>
+										</g>
+										<polygon id="p5533" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5540" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g17" transform="translate(561.2490234375,0)">
+					<g id="g43">
+						<g id="g44">
+							<g id="g45">
+								<g id="g46" at:id="1706" class="s3" onclick="nodeclick(1706)">
+									<g id="g5541">
+										<rect id="r5542" class="s4" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+										<g id="t5544" transform="translate(3,3)">
+											<text id="ts5545" x="18.71484375" y="11.484375" class="s5">Сагитов Мифтей</text>
+											<text id="ts5546" x="27.5947265625" y="27.96875" class="s5">(1813 - 1840)</text>
+											<text id="ts5547" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5548" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5549" x="3.0439453125" y="77.421875" class="s6">2-юродный пра(3)дед</text>
+										</g>
+										<polygon id="p5543" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5550" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g47" transform="translate(154.642578125,0)">
+								<g id="g48" at:id="107" class="s3" onclick="nodeclick(107)">
+									<g id="g5551" clip-path="url(#g5558)">
+										<rect id="r5552" class="s9" x="0.5" y="0.5" width="39" height="34" rx="10" ry="10"/>
+										<g id="t5554" transform="translate(3,3)">
+											<text id="ts5555" x="13" y="11.484375" class="s5">...</text>
+										</g>
+										<polygon id="p5553" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5556" class="s8" x="0.5" y="0.5" width="39" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5558">
+											<rect id="r5559" class="s0" x="0.5" y="0.5" width="39" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g49" transform="translate(214.642578125,0)">
+						<g id="g50">
+							<g id="g51">
+								<g id="g52" at:id="1712" class="s3" onclick="nodeclick(1712)">
+									<g id="g5560">
+										<rect id="r5561" class="s4" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+										<g id="t5563" transform="translate(3,3)">
+											<text id="ts5564" x="9" y="11.484375" class="s5">Сагитов Шарафутдин</text>
+											<text id="ts5565" x="37.8544921875" y="27.96875" class="s5">(1817 - ?)</text>
+											<text id="ts5566" x="0" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5567" x="48.6826171875" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5568" x="35.1123046875" y="77.421875" class="s6">Пра(3)дед</text>
+										</g>
+										<polygon id="p5562" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5569" class="s8" x="0.5" y="0.5" width="133.642578125" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g221" transform="translate(940.5341796875,0)">
+					<g id="g222">
+						<g id="g223">
+							<g id="g224">
+								<g id="g225" at:id="1057" class="s3" onclick="nodeclick(1057)">
+									<g id="g5570" clip-path="url(#g5581)">
+										<rect id="r5571" class="s9" x="0.5" y="0.5" width="136.623046875" height="85.421875" rx="10" ry="10"/>
+										<g id="t5573" transform="translate(3,3)">
+											<text id="ts5574" x="13" y="11.484375" class="s5">Катилова Шамсибану</text>
+											<text id="ts5575" x="39.3447265625" y="27.96875" class="s5">(1823 - ?)</text>
+											<text id="ts5576" x="1.490234375" y="44.453125" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5577" x="50.1728515625" y="60.9375" class="s5">Амзя)</text>
+											<text id="ts5578" x="23.1201171875" y="77.421875" class="s6">Пра(3)бабушка</text>
+										</g>
+										<polygon id="p5572" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5579" class="s8" x="0.5" y="0.5" width="136.623046875" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5581">
+											<rect id="r5582" class="s0" x="0.5" y="0.5" width="136.623046875" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g227" transform="translate(2436.45751953125,0)">
+					<g id="g233">
+						<g id="g234">
+							<g id="g235">
+								<g id="g236" at:id="2045" class="s3" onclick="nodeclick(2045)">
+									<g id="g5583" clip-path="url(#g5594)">
+										<rect id="r5584" class="s9" x="0.5" y="0.5" width="95.830078125" height="85.421875" rx="10" ry="10"/>
+										<g id="t5586" transform="translate(3,3)">
+											<text id="ts5587" x="13" y="11.484375" class="s5">Хисмутдинова</text>
+											<text id="ts5588" x="12.5791015625" y="27.96875" class="s5">Хабибзямал</text>
+											<text id="ts5589" x="18.9482421875" y="44.453125" class="s5">(1820 - ?)</text>
+											<text id="ts5590" x="11.01171875" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5591" x="2.7236328125" y="77.421875" class="s6">Пра(3)бабушка</text>
+										</g>
+										<polygon id="p5585" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5592" class="s8" x="0.5" y="0.5" width="95.830078125" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5594">
+											<rect id="r5595" class="s0" x="0.5" y="0.5" width="95.830078125" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g265" transform="translate(3685.37841796875,0)">
+					<g id="g276">
+						<g id="g277">
+							<g id="g278">
+								<g id="g279" at:id="452" class="s3" onclick="nodeclick(452)">
+									<g id="g5596">
+										<rect id="r5597" class="s4" x="0.5" y="0.5" width="115.337898254395" height="85.421875"/>
+										<g id="t5599" transform="translate(3,3)">
+											<text id="ts5600" x="12.955078125" y="11.484375" class="s5">Габдулрахимов</text>
+											<text id="ts5601" x="19.875" y="27.96875" class="s5">Габдулкабир</text>
+											<text id="ts5602" x="0" y="44.453125" class="s5">(1805 - После 1880)</text>
+											<text id="ts5603" x="20.765625" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5604" x="25.9599609375" y="77.421875" class="s6">Пра(3)дед</text>
+										</g>
+										<polygon id="p5598" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5605" class="s8" x="0.5" y="0.5" width="115.337898254395" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g280" transform="translate(136.337890625,0)">
+								<g id="g281" at:id="1715" class="s3" onclick="nodeclick(1715)">
+									<g id="g5606" clip-path="url(#g5615)">
+										<rect id="r5607" class="s9" x="0.5" y="0.5" width="111.357429504395" height="52.453125" rx="10" ry="10"/>
+										<g id="t5609" transform="translate(3,3)">
+											<text id="ts5610" x="13" y="11.484375" class="s5">Сагитова Зямала</text>
+											<text id="ts5611" x="26.7119140625" y="27.96875" class="s5">(1791 - ?)</text>
+											<text id="ts5612" x="18.775390625" y="44.453125" class="s5">Старая Амзя</text>
+										</g>
+										<polygon id="p5608" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5613" class="s8" x="0.5" y="0.5" width="111.357429504395" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5615">
+											<rect id="r5616" class="s0" x="0.5" y="0.5" width="111.357429504395" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g282" transform="translate(268.6953125,0)">
+						<g id="g283">
+							<g id="g284">
+								<g id="g285" at:id="453" class="s3" onclick="nodeclick(453)">
+									<g id="g5617">
+										<rect id="r5618" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5620" transform="translate(3,3)">
+											<text id="ts5621" x="19.0634765625" y="11.484375" class="s5">Габдулрахимов</text>
+											<text id="ts5622" x="26.203125" y="27.96875" class="s5">Габдулсабир</text>
+											<text id="ts5623" x="34.810546875" y="44.453125" class="s5">(1823 - ?)</text>
+											<text id="ts5624" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5625" x="0" y="77.421875" class="s6">2-юродный пра(3)дед</text>
+										</g>
+										<polygon id="p5619" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5626" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g286" transform="translate(148.5546875,0)">
+								<g id="g287" at:id="927" class="s3" onclick="nodeclick(927)">
+									<g id="g5627" clip-path="url(#g5636)">
+										<rect id="r5628" class="s9" x="0.5" y="0.5" width="137.84765625" height="52.453125" rx="10" ry="10"/>
+										<g id="t5630" transform="translate(3,3)">
+											<text id="ts5631" x="13" y="11.484375" class="s5">Ибрагимова Минсафа</text>
+											<text id="ts5632" x="39.95703125" y="27.96875" class="s5">(1828 - ?)</text>
+											<text id="ts5633" x="32.0205078125" y="44.453125" class="s5">Старая Амзя</text>
+										</g>
+										<polygon id="p5629" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5634" class="s8" x="0.5" y="0.5" width="137.84765625" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5636">
+											<rect id="r5637" class="s0" x="0.5" y="0.5" width="137.84765625" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g297" transform="translate(4855.9873046875,0)">
+					<g id="g372">
+						<g id="g373">
+							<g id="g374">
+								<g id="g375" at:id="2650" class="s3" onclick="nodeclick(2650)">
+									<g id="g5638" clip-path="url(#g5649)">
+										<rect id="r5639" class="s9" x="0.5" y="0.5" width="129.12890625" height="85.421875" rx="10" ry="10"/>
+										<g id="t5641" transform="translate(3,3)">
+											<text id="ts5642" x="13" y="11.484375" class="s5">Юлдашева Махмубя</text>
+											<text id="ts5643" x="35.59765625" y="27.96875" class="s5">(1811 - ?)</text>
+											<text id="ts5644" x="32.7939453125" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5645" x="31.708984375" y="60.9375" class="s6">2-юродная</text>
+											<text id="ts5646" x="20.044921875" y="77.421875" class="s6">пра(3)бабушка</text>
+										</g>
+										<polygon id="p5640" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5647" class="s8" x="0.5" y="0.5" width="129.12890625" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5649">
+											<rect id="r5650" class="s0" x="0.5" y="0.5" width="129.12890625" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g376" transform="translate(150.12890625,0)">
+						<g id="g377">
+							<g id="g378">
+								<g id="g379" at:id="2640" class="s3" onclick="nodeclick(2640)">
+									<g id="g5651">
+										<rect id="r5652" class="s4" x="0.5" y="0.5" width="134.80859375" height="68.9375"/>
+										<g id="t5654" transform="translate(3,3)">
+											<text id="ts5655" x="9" y="11.484375" class="s5">Юлдашев Губейдулла</text>
+											<text id="ts5656" x="28.177734375" y="27.96875" class="s5">(1814 - 1851)</text>
+											<text id="ts5657" x="35.6337890625" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5658" x="3.626953125" y="60.9375" class="s6">2-юродный пра(3)дед</text>
+										</g>
+										<polygon id="p5653" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5659" class="s8" x="0.5" y="0.5" width="134.80859375" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g380" transform="translate(155.80859375,0)">
+								<g id="g381" at:id="2641" class="s3" onclick="nodeclick(2641)">
+									<g id="g5660" clip-path="url(#g5668)">
+										<rect id="r5661" class="s9" x="0.5" y="0.5" width="120.269538879395" height="35.96875" rx="10" ry="10"/>
+										<g id="t5663" transform="translate(3,3)">
+											<text id="ts5664" x="13" y="11.484375" class="s5">Забирова Минька?</text>
+											<text id="ts5665" x="31.16796875" y="27.96875" class="s5">(1816 - ?)</text>
+										</g>
+										<polygon id="p5662" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5666" class="s8" x="0.5" y="0.5" width="120.269538879395" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5668">
+											<rect id="r5669" class="s0" x="0.5" y="0.5" width="120.269538879395" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g382" transform="translate(447.20703125,0)">
+						<g id="g383">
+							<g id="g384">
+								<g id="g385" at:id="2637" class="s3" onclick="nodeclick(2637)">
+									<g id="g5670">
+										<rect id="r5671" class="s4" x="0.5" y="0.5" width="142.09765625" height="68.9375"/>
+										<g id="t5673" transform="translate(3,3)">
+											<text id="ts5674" x="9" y="11.484375" class="s5">Юлдашев Нигаметулла</text>
+											<text id="ts5675" x="42.08203125" y="27.96875" class="s5">(1818 - ?)</text>
+											<text id="ts5676" x="39.2783203125" y="44.453125" class="s5">Кичкальня</text>
+											<text id="ts5677" x="39.33984375" y="60.9375" class="s6">Пра(3)дед</text>
+										</g>
+										<polygon id="p5672" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5678" class="s8" x="0.5" y="0.5" width="142.09765625" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g433" transform="translate(5476.2919921875,0)">
+					<g id="g439">
+						<g id="g440">
+							<g id="g441">
+								<g id="g442" at:id="2638" class="s3" onclick="nodeclick(2638)">
+									<g id="g5679" clip-path="url(#g5689)">
+										<rect id="r5680" class="s9" x="0.5" y="0.5" width="90.896484375" height="68.9375" rx="10" ry="10"/>
+										<g id="t5682" transform="translate(3,3)">
+											<text id="ts5683" x="13" y="11.484375" class="s5">Абдрахимова</text>
+											<text id="ts5684" x="11.7470703125" y="27.96875" class="s5">Гульбягида</text>
+											<text id="ts5685" x="16.4814453125" y="44.453125" class="s5">(1819 - ?)</text>
+											<text id="ts5686" x="0.2568359375" y="60.9375" class="s6">Пра(3)бабушка</text>
+										</g>
+										<polygon id="p5681" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5687" class="s8" x="0.5" y="0.5" width="90.896484375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5689">
+											<rect id="r5690" class="s0" x="0.5" y="0.5" width="90.896484375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g444" transform="translate(7065.89208984375,0)">
+					<g id="g450">
+						<g id="g451">
+							<g id="g452">
+								<g id="g453" at:id="2087" class="s3" onclick="nodeclick(2087)">
+									<g id="g5691">
+										<rect id="r5692" class="s4" x="0.5" y="0.5" width="139.150390625" height="52.453125"/>
+										<g id="t5694" transform="translate(3,3)">
+											<text id="ts5695" x="10.8779296875" y="11.484375" class="s5">Шабаев Тимербулат</text>
+											<text id="ts5696" x="0" y="27.96875" class="s5">(? - Между 1829 и 1850)</text>
+											<text id="ts5697" x="37.8662109375" y="44.453125" class="s6">Пра(3)дед</text>
+										</g>
+										<polygon id="p5693" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5698" class="s8" x="0.5" y="0.5" width="139.150390625" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g14" transform="translate(0,569.625)">
+				<g id="g15" transform="translate(444.16064453125,0)">
+					<g id="g53">
+						<g id="g54">
+							<g id="g55">
+								<g id="g56" at:id="2162" class="s3" onclick="nodeclick(2162)">
+									<g id="g5699" clip-path="url(#g5712)">
+										<rect id="r5700" class="s9" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+										<g id="t5702" transform="translate(3,3)">
+											<text id="ts5703" x="19.037109375" y="11.484375" class="s5">Шарафутдинова</text>
+											<text id="ts5704" x="33.076171875" y="27.96875" class="s5">Газельбану</text>
+											<text id="ts5705" x="37.8544921875" y="44.453125" class="s5">(1842 - ?)</text>
+											<text id="ts5706" x="0" y="60.9375" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5707" x="48.6826171875" y="77.421875" class="s5">Амзя)</text>
+											<text id="ts5708" x="33.9658203125" y="93.90625" class="s6">2-юродная</text>
+											<text id="ts5709" x="22.3017578125" y="110.390625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5701" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5710" class="s8" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5712">
+											<rect id="r5713" class="s0" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g57" transform="translate(154.642578125,0)">
+						<g id="g58">
+							<g id="g59">
+								<g id="g60" at:id="2160" class="s3" onclick="nodeclick(2160)">
+									<g id="g5714" clip-path="url(#g5727)">
+										<rect id="r5715" class="s9" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+										<g id="t5717" transform="translate(3,3)">
+											<text id="ts5718" x="19.037109375" y="11.484375" class="s5">Шарафутдинова</text>
+											<text id="ts5719" x="34.2451171875" y="27.96875" class="s5">Афзялниса</text>
+											<text id="ts5720" x="37.8544921875" y="44.453125" class="s5">(1849 - ?)</text>
+											<text id="ts5721" x="0" y="60.9375" class="s5">Студеный ключ(Старая</text>
+											<text id="ts5722" x="48.6826171875" y="77.421875" class="s5">Амзя)</text>
+											<text id="ts5723" x="33.9658203125" y="93.90625" class="s6">2-юродная</text>
+											<text id="ts5724" x="22.3017578125" y="110.390625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5716" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5725" class="s8" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5727">
+											<rect id="r5728" class="s0" x="0.5" y="0.5" width="133.642578125" height="118.390617370605" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g61" transform="translate(309.28515625,0)">
+						<g id="g62">
+							<g id="g63">
+								<g id="g64" at:id="2159" class="s3" onclick="nodeclick(2159)">
+									<g id="g5729">
+										<rect id="r5730" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5732" transform="translate(3,3)">
+											<text id="ts5733" x="19.142578125" y="11.484375" class="s5">Шарафутдинов</text>
+											<text id="ts5734" x="28.2216796875" y="27.96875" class="s5">Низамутдин</text>
+											<text id="ts5735" x="18.076171875" y="44.453125" class="s5">(08.12.1852 - ?)</text>
+											<text id="ts5736" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5737" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5731" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5738" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g65" transform="translate(457.83984375,0)">
+						<g id="g66">
+							<g id="g67">
+								<g id="g68" at:id="2157" class="s3" onclick="nodeclick(2157)">
+									<g id="g5739">
+										<rect id="r5740" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5742" transform="translate(3,3)">
+											<text id="ts5743" x="19.142578125" y="11.484375" class="s5">Шарафутдинов</text>
+											<text id="ts5744" x="26.384765625" y="27.96875" class="s5">Жамалетдин</text>
+											<text id="ts5745" x="18.076171875" y="44.453125" class="s5">(16.04.1856 - ?)</text>
+											<text id="ts5746" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5747" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5741" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5748" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g69" transform="translate(606.39453125,0)">
+						<g id="g70">
+							<g id="g71">
+								<g id="g72" at:id="2161" class="s3" onclick="nodeclick(2161)">
+									<g id="g5749" clip-path="url(#g5761)">
+										<rect id="r5750" class="s9" x="0.5" y="0.5" width="139.51171875" height="101.90625" rx="10" ry="10"/>
+										<g id="t5752" transform="translate(3,3)">
+											<text id="ts5753" x="13" y="11.484375" class="s5">Шарафутдинова Биби</text>
+											<text id="ts5754" x="49.8623046875" y="27.96875" class="s5">Гайша</text>
+											<text id="ts5755" x="24.0546875" y="44.453125" class="s5">(16.12.1857 - ?)</text>
+											<text id="ts5756" x="32.8525390625" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5757" x="36.900390625" y="77.421875" class="s6">2-юродная</text>
+											<text id="ts5758" x="25.236328125" y="93.90625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5751" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5759" class="s8" x="0.5" y="0.5" width="139.51171875" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5761">
+											<rect id="r5762" class="s0" x="0.5" y="0.5" width="139.51171875" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g73" transform="translate(766.90625,0)">
+						<g id="g74">
+							<g id="g77">
+								<g id="g78" at:id="1932" class="s3" onclick="nodeclick(1932)">
+									<g id="g5763" clip-path="url(#g5770)">
+										<rect id="r5764" class="s9" x="0.5" y="0.5" width="57.884765625" height="34" rx="10" ry="10"/>
+										<g id="t5766" transform="translate(3,3)">
+											<text id="ts5767" x="13" y="11.484375" class="s5">Фатиха</text>
+										</g>
+										<polygon id="p5765" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5768" class="s8" x="0.5" y="0.5" width="57.884765625" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5770">
+											<rect id="r5771" class="s0" x="0.5" y="0.5" width="57.884765625" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g75" transform="translate(78.884765625,0)">
+								<g id="g76" at:id="2158" class="s3" onclick="nodeclick(2158)">
+									<g id="g5772">
+										<rect id="r5773" class="s4" x="0.5" y="0.5" width="98.26953125" height="85.421875"/>
+										<g id="t5775" transform="translate(3,3)">
+											<text id="ts5776" x="9" y="11.484375" class="s5">Шарафутдинов</text>
+											<text id="ts5777" x="13.4912109375" y="27.96875" class="s5">Камалетдин</text>
+											<text id="ts5778" x="20.16796875" y="44.453125" class="s5">(1845 - ?)</text>
+											<text id="ts5779" x="12.2314453125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5780" x="17.42578125" y="77.421875" class="s6">Пра(2)дед</text>
+										</g>
+										<polygon id="p5774" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5781" class="s8" x="0.5" y="0.5" width="98.26953125" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g226" transform="translate(2481.95849609375,0)">
+					<g id="g237">
+						<g id="g238">
+							<g id="g239">
+								<g id="g240" at:id="447" class="s3" onclick="nodeclick(447)">
+									<g id="g5782" clip-path="url(#g5792)">
+										<rect id="r5783" class="s9" x="0.5" y="0.5" width="146.232421875" height="68.9375" rx="10" ry="10"/>
+										<g id="t5785" transform="translate(3,3)">
+											<text id="ts5786" x="13" y="11.484375" class="s5">Габдулкабирова Гайша</text>
+											<text id="ts5787" x="27.4150390625" y="27.96875" class="s5">(02.05.1852 - ?)</text>
+											<text id="ts5788" x="36.212890625" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts5789" x="27.9248046875" y="60.9375" class="s6">Пра(2)бабушка</text>
+										</g>
+										<polygon id="p5784" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5790" class="s8" x="0.5" y="0.5" width="146.232421875" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5792">
+											<rect id="r5793" class="s0" x="0.5" y="0.5" width="146.232421875" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g241" transform="translate(167.232421875,0)">
+						<g id="g242">
+							<g id="g243">
+								<g id="g244" at:id="449" class="s3" onclick="nodeclick(449)">
+									<g id="g5794" clip-path="url(#g5806)">
+										<rect id="r5795" class="s9" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+										<g id="t5797" transform="translate(3,3)">
+											<text id="ts5798" x="13" y="11.484375" class="s5">Габдулкабирова</text>
+											<text id="ts5799" x="15.8486328125" y="27.96875" class="s5">Хайрельниса</text>
+											<text id="ts5800" x="8.146484375" y="44.453125" class="s5">(20.12.1844 - ?)</text>
+											<text id="ts5801" x="16.9443359375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5802" x="20.9921875" y="77.421875" class="s6">2-юродная</text>
+											<text id="ts5803" x="9.328125" y="93.90625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5796" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5804" class="s8" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5806">
+											<rect id="r5807" class="s0" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g245" transform="translate(295.927734375,0)">
+						<g id="g246">
+							<g id="g247">
+								<g id="g248" at:id="446" class="s3" onclick="nodeclick(446)">
+									<g id="g5808">
+										<rect id="r5809" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5811" transform="translate(3,3)">
+											<text id="ts5812" x="19.5791015625" y="11.484375" class="s5">Габдулкабиров</text>
+											<text id="ts5813" x="35.7451171875" y="27.96875" class="s5">Сагитдин</text>
+											<text id="ts5814" x="34.810546875" y="44.453125" class="s5">(1848 - ?)</text>
+											<text id="ts5815" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5816" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5810" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5817" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g249" transform="translate(148.5546875,0)">
+								<g id="g250" at:id="1482" class="s3" onclick="nodeclick(1482)">
+									<g id="g5818" clip-path="url(#g5826)">
+										<rect id="r5819" class="s9" x="0.5" y="0.5" width="92.912109375" height="35.96875" rx="10" ry="10"/>
+										<g id="t5821" transform="translate(3,3)">
+											<text id="ts5822" x="13" y="11.484375" class="s5">Мухаммедова</text>
+											<text id="ts5823" x="15.74609375" y="27.96875" class="s5">Гульчахар</text>
+										</g>
+										<polygon id="p5820" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5824" class="s8" x="0.5" y="0.5" width="92.912109375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5826">
+											<rect id="r5827" class="s0" x="0.5" y="0.5" width="92.912109375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g251" transform="translate(558.39453125,0)">
+						<g id="g252">
+							<g id="g259">
+								<g id="g260" at:id="626" class="s3" onclick="nodeclick(626)">
+									<g id="g5828" clip-path="url(#g5835)">
+										<rect id="r5829" class="s9" x="0.5" y="0.5" width="124.787101745605" height="34" rx="10" ry="10"/>
+										<g id="t5831" transform="translate(3,3)">
+											<text id="ts5832" x="13" y="11.484375" class="s5">Гатауллина Васима</text>
+										</g>
+										<polygon id="p5830" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5833" class="s8" x="0.5" y="0.5" width="124.787101745605" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5835">
+											<rect id="r5836" class="s0" x="0.5" y="0.5" width="124.787101745605" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g257" transform="translate(145.787109375,0)">
+								<g id="g258" at:id="814" class="s3" onclick="nodeclick(814)">
+									<g id="g5837" clip-path="url(#g5844)">
+										<rect id="r5838" class="s9" x="0.5" y="0.5" width="132.328125" height="34" rx="10" ry="10"/>
+										<g id="t5840" transform="translate(3,3)">
+											<text id="ts5841" x="13" y="11.484375" class="s5">Жямалханова Гайша</text>
+										</g>
+										<polygon id="p5839" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5842" class="s8" x="0.5" y="0.5" width="132.328125" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5844">
+											<rect id="r5845" class="s0" x="0.5" y="0.5" width="132.328125" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g253" transform="translate(299.115234375,0)">
+								<g id="g254" at:id="445" class="s3" onclick="nodeclick(445)">
+									<g id="g5846">
+										<rect id="r5847" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5849" transform="translate(3,3)">
+											<text id="ts5850" x="19.5791015625" y="11.484375" class="s5">Габдулкабиров</text>
+											<text id="ts5851" x="32.2587890625" y="27.96875" class="s5">Гайнетдин</text>
+											<text id="ts5852" x="26.443359375" y="44.453125" class="s5">(01.1850 - ?)</text>
+											<text id="ts5853" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5854" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5848" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5855" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g255" transform="translate(447.669921875,0)">
+								<g id="g256" at:id="2152" class="s3" onclick="nodeclick(2152)">
+									<g id="g5856" clip-path="url(#g5864)">
+										<rect id="r5857" class="s9" x="0.5" y="0.5" width="99.720703125" height="35.96875" rx="10" ry="10"/>
+										<g id="t5859" transform="translate(3,3)">
+											<text id="ts5860" x="13" y="11.484375" class="s5">Шамсутдинова</text>
+											<text id="ts5861" x="15.125" y="27.96875" class="s5">Хуббелниса</text>
+										</g>
+										<polygon id="p5858" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5862" class="s8" x="0.5" y="0.5" width="99.720703125" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5864">
+											<rect id="r5865" class="s0" x="0.5" y="0.5" width="99.720703125" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g261" transform="translate(1126.78515625,0)">
+						<g id="g262">
+							<g id="g263">
+								<g id="g264" at:id="448" class="s3" onclick="nodeclick(448)">
+									<g id="g5866" clip-path="url(#g5878)">
+										<rect id="r5867" class="s9" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+										<g id="t5869" transform="translate(3,3)">
+											<text id="ts5870" x="13" y="11.484375" class="s5">Габдулкабирова</text>
+											<text id="ts5871" x="25.9736328125" y="27.96875" class="s5">Жамалия</text>
+											<text id="ts5872" x="8.146484375" y="44.453125" class="s5">(08.04.1858 - ?)</text>
+											<text id="ts5873" x="16.9443359375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5874" x="20.9921875" y="77.421875" class="s6">2-юродная</text>
+											<text id="ts5875" x="9.328125" y="93.90625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5868" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5876" class="s8" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5878">
+											<rect id="r5879" class="s0" x="0.5" y="0.5" width="107.695320129395" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g288" transform="translate(3747.43896484375,0)">
+					<g id="g289">
+						<g id="g290">
+							<g id="g291">
+								<g id="g292" at:id="444" class="s3" onclick="nodeclick(444)">
+									<g id="g5880">
+										<rect id="r5881" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5883" transform="translate(3,3)">
+											<text id="ts5884" x="19.5791015625" y="11.484375" class="s5">Габдулкабиров</text>
+											<text id="ts5885" x="31.705078125" y="27.96875" class="s5">Абдулвали</text>
+											<text id="ts5886" x="34.810546875" y="44.453125" class="s5">(1824 - ?)</text>
+											<text id="ts5887" x="26.8740234375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5888" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5882" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5889" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g293" transform="translate(148.5546875,0)">
+								<g id="g294" at:id="1727" class="s3" onclick="nodeclick(1727)">
+									<g id="g5890" clip-path="url(#g5899)">
+										<rect id="r5891" class="s9" x="0.5" y="0.5" width="138.310546875" height="52.453125" rx="10" ry="10"/>
+										<g id="t5893" transform="translate(3,3)">
+											<text id="ts5894" x="13" y="11.484375" class="s5">Сайфуллина Махмубя</text>
+											<text id="ts5895" x="40.1884765625" y="27.96875" class="s5">(1820 - ?)</text>
+											<text id="ts5896" x="32.251953125" y="44.453125" class="s5">Старая Амзя</text>
+										</g>
+										<polygon id="p5892" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5897" class="s8" x="0.5" y="0.5" width="138.310546875" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5899">
+											<rect id="r5900" class="s0" x="0.5" y="0.5" width="138.310546875" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g296" transform="translate(4986.14453125,0)">
+					<g id="g386">
+						<g id="g387">
+							<g id="g388">
+								<g id="g389" at:id="2642" class="s3" onclick="nodeclick(2642)">
+									<g id="g5901" clip-path="url(#g5913)">
+										<rect id="r5902" class="s9" x="0.5" y="0.5" width="102.84375" height="101.90625" rx="10" ry="10"/>
+										<g id="t5904" transform="translate(3,3)">
+											<text id="ts5905" x="13" y="11.484375" class="s5">Нигаметуллина</text>
+											<text id="ts5906" x="17.181640625" y="27.96875" class="s5">Гульзямала</text>
+											<text id="ts5907" x="22.455078125" y="44.453125" class="s5">(1844 - ?)</text>
+											<text id="ts5908" x="19.6513671875" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5909" x="18.56640625" y="77.421875" class="s6">2-юродная</text>
+											<text id="ts5910" x="6.90234375" y="93.90625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p5903" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5911" class="s8" x="0.5" y="0.5" width="102.84375" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5913">
+											<rect id="r5914" class="s0" x="0.5" y="0.5" width="102.84375" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g390" transform="translate(123.84375,0)">
+						<g id="g391">
+							<g id="g392">
+								<g id="g393" at:id="2644" class="s3" onclick="nodeclick(2644)">
+									<g id="g5915">
+										<rect id="r5916" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5918" transform="translate(3,3)">
+											<text id="ts5919" x="22.0048828125" y="11.484375" class="s5">Нигаметуллин</text>
+											<text id="ts5920" x="26.5166015625" y="27.96875" class="s5">Синегатулла</text>
+											<text id="ts5921" x="7.81640625" y="44.453125" class="s5">(09.06.1847 - 1851)</text>
+											<text id="ts5922" x="32.0068359375" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5923" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5917" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5924" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g394" transform="translate(272.3984375,0)">
+						<g id="g395">
+							<g id="g400">
+								<g id="g401" at:id="2688" class="s3" onclick="nodeclick(2688)">
+									<g id="g5925" clip-path="url(#g5934)">
+										<rect id="r5926" class="s9" x="0.5" y="0.5" width="86.501953125" height="52.453125" rx="10" ry="10"/>
+										<g id="t5928" transform="translate(3,3)">
+											<text id="ts5929" x="13" y="11.484375" class="s5">Сафиуллина</text>
+											<text id="ts5930" x="6.7958984375" y="27.96875" class="s5">Гайнежамал</text>
+											<text id="ts5931" x="11.48046875" y="44.453125" class="s5">Кичкальня</text>
+										</g>
+										<polygon id="p5927" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5932" class="s8" x="0.5" y="0.5" width="86.501953125" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5934">
+											<rect id="r5935" class="s0" x="0.5" y="0.5" width="86.501953125" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g396" transform="translate(107.501953125,0)">
+								<g id="g397" at:id="2645" class="s3" onclick="nodeclick(2645)">
+									<g id="g5936">
+										<rect id="r5937" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5939" transform="translate(3,3)">
+											<text id="ts5940" x="22.0048828125" y="11.484375" class="s5">Нигаметуллин</text>
+											<text id="ts5941" x="31.16015625" y="27.96875" class="s5">Хафизулла</text>
+											<text id="ts5942" x="18.076171875" y="44.453125" class="s5">(08.01.1850 - ?)</text>
+											<text id="ts5943" x="32.0068359375" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5944" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5938" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5945" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g398" transform="translate(256.056640625,0)">
+								<g id="g399" at:id="2832" class="s3" onclick="nodeclick(2832)">
+									<g id="g5946" clip-path="url(#g5953)">
+										<rect id="r5947" class="s9" x="0.5" y="0.5" width="148.44140625" height="34" rx="10" ry="10"/>
+										<g id="t5949" transform="translate(3,3)">
+											<text id="ts5950" x="13" y="11.484375" class="s5">Шакиржанова Маусафа</text>
+										</g>
+										<polygon id="p5948" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5951" class="s8" x="0.5" y="0.5" width="148.44140625" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5953">
+											<rect id="r5954" class="s0" x="0.5" y="0.5" width="148.44140625" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g402" transform="translate(697.896484375,0)">
+						<g id="g403">
+							<g id="g404">
+								<g id="g405" at:id="2646" class="s3" onclick="nodeclick(2646)">
+									<g id="g5955">
+										<rect id="r5956" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t5958" transform="translate(3,3)">
+											<text id="ts5959" x="22.0048828125" y="11.484375" class="s5">Нигаметуллин</text>
+											<text id="ts5960" x="32.1416015625" y="27.96875" class="s5">Хамигулла</text>
+											<text id="ts5961" x="34.810546875" y="44.453125" class="s5">(1857 - ?)</text>
+											<text id="ts5962" x="32.0068359375" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5963" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p5957" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5964" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g406" transform="translate(846.451171875,0)">
+						<g id="g407">
+							<g id="g408">
+								<g id="g409" at:id="2181" class="s3" onclick="nodeclick(2181)">
+									<g id="g5965" clip-path="url(#g5976)">
+										<rect id="r5966" class="s9" x="0.5" y="0.5" width="102.84375" height="85.421875" rx="10" ry="10"/>
+										<g id="t5968" transform="translate(3,3)">
+											<text id="ts5969" x="13" y="11.484375" class="s5">Нигаметуллина</text>
+											<text id="ts5970" x="10.0771484375" y="27.96875" class="s5">Шафигизямал</text>
+											<text id="ts5971" x="5.720703125" y="44.453125" class="s5">(22.05.1853 - ?)</text>
+											<text id="ts5972" x="19.6513671875" y="60.9375" class="s5">Кичкальня</text>
+											<text id="ts5973" x="6.23046875" y="77.421875" class="s6">Пра(2)бабушка</text>
+										</g>
+										<polygon id="p5967" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5974" class="s8" x="0.5" y="0.5" width="102.84375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5976">
+											<rect id="r5977" class="s0" x="0.5" y="0.5" width="102.84375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g443" transform="translate(6733.72265625,0)">
+					<g id="g454">
+						<g id="g455">
+							<g id="g456">
+								<g id="g457" at:id="1896" class="s3" onclick="nodeclick(1896)">
+									<g id="g5978">
+										<rect id="r5979" class="s4" x="0.5" y="0.5" width="111.921867370605" height="85.421875"/>
+										<g id="t5981" transform="translate(3,3)">
+											<text id="ts5982" x="14.296875" y="11.484375" class="s5">Тимербулатов</text>
+											<text id="ts5983" x="11.9326171875" y="27.96875" class="s5">Мухаммедсафа</text>
+											<text id="ts5984" x="0" y="44.453125" class="s5">(1827 - 08.04.1897)</text>
+											<text id="ts5985" x="19.0576171875" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts5986" x="24.251953125" y="77.421875" class="s6">Пра(2)дед</text>
+										</g>
+										<polygon id="p5980" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r5987" class="s8" x="0.5" y="0.5" width="111.921867370605" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g460" transform="translate(132.921875,0)">
+								<g id="g461" at:id="1971" class="s3" onclick="nodeclick(1971)">
+									<g id="g5988" clip-path="url(#g5995)">
+										<rect id="r5989" class="s9" x="0.5" y="0.5" width="69.568359375" height="34" rx="10" ry="10"/>
+										<g id="t5991" transform="translate(3,3)">
+											<text id="ts5992" x="13" y="11.484375" class="s5">Хаерниса</text>
+										</g>
+										<polygon id="p5990" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r5993" class="s8" x="0.5" y="0.5" width="69.568359375" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g5995">
+											<rect id="r5996" class="s0" x="0.5" y="0.5" width="69.568359375" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g458" transform="translate(223.490234375,0)">
+								<g id="g459" at:id="1276" class="s3" onclick="nodeclick(1276)">
+									<g id="g5997" clip-path="url(#g6006)">
+										<rect id="r5998" class="s9" x="0.5" y="0.5" width="137.05078125" height="52.453125" rx="10" ry="10"/>
+										<g id="t6000" transform="translate(3,3)">
+											<text id="ts6001" x="13" y="11.484375" class="s5">Миндубаева Махмубя</text>
+											<text id="ts6002" x="39.55859375" y="27.96875" class="s5">(1822 - ?)</text>
+											<text id="ts6003" x="31.2353515625" y="44.453125" class="s5">старый Амзя</text>
+										</g>
+										<polygon id="p5999" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6004" class="s8" x="0.5" y="0.5" width="137.05078125" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6006">
+											<rect id="r6007" class="s0" x="0.5" y="0.5" width="137.05078125" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g462" transform="translate(381.541015625,0)">
+						<g id="g463">
+							<g id="g464">
+								<g id="g465" at:id="1895" class="s3" onclick="nodeclick(1895)">
+									<g id="g6008">
+										<rect id="r6009" class="s4" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+										<g id="t6011" transform="translate(3,3)">
+											<text id="ts6012" x="22.11328125" y="11.484375" class="s5">Тимербулатов</text>
+											<text id="ts6013" x="28.646484375" y="27.96875" class="s5">Курмангали</text>
+											<text id="ts6014" x="34.810546875" y="44.453125" class="s5">(1820 - ?)</text>
+											<text id="ts6015" x="26.4873046875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6016" x="0" y="77.421875" class="s6">2-юродный пра(2)дед</text>
+										</g>
+										<polygon id="p6010" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6017" class="s8" x="0.5" y="0.5" width="127.5546875" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g466" transform="translate(148.5546875,0)">
+								<g id="g467" at:id="1897" class="s3" onclick="nodeclick(1897)">
+									<g id="g6018" clip-path="url(#g6027)">
+										<rect id="r6019" class="s9" x="0.5" y="0.5" width="145.119140625" height="52.453125" rx="10" ry="10"/>
+										<g id="t6021" transform="translate(3,3)">
+											<text id="ts6022" x="13" y="11.484375" class="s5">Тимербулатова Габида</text>
+											<text id="ts6023" x="43.5927734375" y="27.96875" class="s5">(1817 - ?)</text>
+											<text id="ts6024" x="35.26953125" y="44.453125" class="s5">старый Амзя</text>
+										</g>
+										<polygon id="p6020" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6025" class="s8" x="0.5" y="0.5" width="145.119140625" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6027">
+											<rect id="r6028" class="s0" x="0.5" y="0.5" width="145.119140625" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g468" transform="translate(696.21484375,0)">
+						<g id="g469">
+							<g id="g470">
+								<g id="g471" at:id="1898" class="s3" onclick="nodeclick(1898)">
+									<g id="g6029" clip-path="url(#g6041)">
+										<rect id="r6030" class="s9" x="0.5" y="0.5" width="102.626953125" height="101.90625" rx="10" ry="10"/>
+										<g id="t6032" transform="translate(3,3)">
+											<text id="ts6033" x="13" y="11.484375" class="s5">Тимербулатова</text>
+											<text id="ts6034" x="20.416015625" y="27.96875" class="s5">Мирфива?</text>
+											<text id="ts6035" x="22.3466796875" y="44.453125" class="s5">(1829 - ?)</text>
+											<text id="ts6036" x="14.0234375" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6037" x="18.4580078125" y="77.421875" class="s6">2-юродная</text>
+											<text id="ts6038" x="6.7939453125" y="93.90625" class="s6">пра(2)бабушка</text>
+										</g>
+										<polygon id="p6031" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6039" class="s8" x="0.5" y="0.5" width="102.626953125" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6041">
+											<rect id="r6042" class="s0" x="0.5" y="0.5" width="102.626953125" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g12" transform="translate(0,727.015625)">
+				<g id="g79" transform="translate(882.51513671875,0)">
+					<g id="g80">
+						<g id="g81">
+							<g id="g82">
+								<g id="g83" at:id="1031" class="s3" onclick="nodeclick(1031)">
+									<g id="g6043">
+										<rect id="r6044" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6046" transform="translate(3,3)">
+											<text id="ts6047" x="13.8603515625" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6048" x="20.3525390625" y="27.96875" class="s5">Низамутдин</text>
+											<text id="ts6049" x="10.20703125" y="44.453125" class="s5">(14.05.1867 - ?)</text>
+											<text id="ts6050" x="19.0048828125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6051" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6045" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6052" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g84" transform="translate(132.81640625,0)">
+								<g id="g85" at:id="803" class="s3" onclick="nodeclick(803)">
+									<g id="g6053" clip-path="url(#g6061)">
+										<rect id="r6054" class="s9" x="0.5" y="0.5" width="113.05078125" height="35.96875" rx="10" ry="10"/>
+										<g id="t6056" transform="translate(3,3)">
+											<text id="ts6057" x="13" y="11.484375" class="s5">Динмухаммедова</text>
+											<text id="ts6058" x="21.08984375" y="27.96875" class="s5">Хайризямал</text>
+										</g>
+										<polygon id="p6055" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6059" class="s8" x="0.5" y="0.5" width="113.05078125" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6061">
+											<rect id="r6062" class="s0" x="0.5" y="0.5" width="113.05078125" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g86" transform="translate(266.8671875,0)">
+						<g id="g87">
+							<g id="g90">
+								<g id="g91" at:id="1782" class="s3" onclick="nodeclick(1782)">
+									<g id="g6063">
+										<rect id="r6064" class="s4" x="0.5" y="0.5" width="91.77734375" height="35.96875"/>
+										<g id="t6066" transform="translate(3,3)">
+											<text id="ts6067" x="9" y="11.484375" class="s5">Сиразитдинов</text>
+											<text id="ts6068" x="11.431640625" y="27.96875" class="s5">Гилязитдин</text>
+										</g>
+										<polygon id="p6065" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6069" class="s8" x="0.5" y="0.5" width="91.77734375" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g88" transform="translate(112.77734375,0)">
+								<g id="g89" at:id="1035" class="s3" onclick="nodeclick(1035)">
+									<g id="g6070" clip-path="url(#g6081)">
+										<rect id="r6071" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6073" transform="translate(3,3)">
+											<text id="ts6074" x="22.970703125" y="11.484375" class="s5">Камалетдинова</text>
+											<text id="ts6075" x="42.0576171875" y="27.96875" class="s5">Камария</text>
+											<text id="ts6076" x="22.466796875" y="44.453125" class="s5">(15.01.1869 - ?)</text>
+											<text id="ts6077" x="31.2646484375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6078" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6072" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6079" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6081">
+											<rect id="r6082" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g92" transform="translate(536.98046875,0)">
+						<g id="g93">
+							<g id="g94">
+								<g id="g95" at:id="2116" class="s3" onclick="nodeclick(2116)">
+									<g id="g6083">
+										<rect id="r6084" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6086" transform="translate(3,3)">
+											<text id="ts6087" x="13.8603515625" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6088" x="22.3505859375" y="27.96875" class="s5">Шайхутдин</text>
+											<text id="ts6089" x="10.20703125" y="44.453125" class="s5">(01.02.1871 - ?)</text>
+											<text id="ts6090" x="19.0048828125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6091" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6085" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6092" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g96" transform="translate(669.796875,0)">
+						<g id="g97">
+							<g id="g98">
+								<g id="g99" at:id="1970" class="s3" onclick="nodeclick(1970)">
+									<g id="g6093" clip-path="url(#g6103)">
+										<rect id="r6094" class="s9" x="0.5" y="0.5" width="136.3359375" height="68.9375" rx="10" ry="10"/>
+										<g id="t6096" transform="translate(3,3)">
+											<text id="ts6097" x="45.8984375" y="11.484375" class="s5">Хадича</text>
+											<text id="ts6098" x="22.466796875" y="27.96875" class="s5">(08.03.1873 - ?)</text>
+											<text id="ts6099" x="31.2646484375" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts6100" x="0" y="60.9375" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6095" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6101" class="s8" x="0.5" y="0.5" width="136.3359375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6103">
+											<rect id="r6104" class="s0" x="0.5" y="0.5" width="136.3359375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g13" transform="translate(1719.64794921875,0)">
+					<g id="g100">
+						<g id="g101">
+							<g id="g102">
+								<g id="g103" at:id="1388" class="s3" onclick="nodeclick(1388)">
+									<g id="g6105">
+										<rect id="r6106" class="s4" x="0.5" y="0.5" width="111.921867370605" height="52.453125"/>
+										<g id="t6108" transform="translate(3,3)">
+											<text id="ts6109" x="39.931640625" y="11.484375" class="s5">Муса</text>
+											<text id="ts6110" x="0" y="27.96875" class="s5">(17.09.1876 - 1878)</text>
+											<text id="ts6111" x="0.052734375" y="44.453125" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6107" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6112" class="s8" x="0.5" y="0.5" width="111.921867370605" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g104" transform="translate(132.921875,0)">
+						<g id="g105">
+							<g id="g106">
+								<g id="g107" at:id="1033" class="s3" onclick="nodeclick(1033)">
+									<g id="g6113">
+										<rect id="r6114" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6116" transform="translate(3,3)">
+											<text id="ts6117" x="13.8603515625" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6118" x="27.263671875" y="27.96875" class="s5">Халиулла</text>
+											<text id="ts6119" x="10.20703125" y="44.453125" class="s5">(20.12.1880 - ?)</text>
+											<text id="ts6120" x="19.0048828125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6121" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6115" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6122" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g108" transform="translate(265.73828125,0)">
+						<g id="g109">
+							<g id="g110">
+								<g id="g111" at:id="1029" class="s3" onclick="nodeclick(1029)">
+									<g id="g6123">
+										<rect id="r6124" class="s4" x="0.5" y="0.5" width="145.390625" height="85.421875"/>
+										<g id="t6126" transform="translate(3,3)">
+											<text id="ts6127" x="30.6474609375" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6128" x="26.7216796875" y="27.96875" class="s5">Мухаммадзакир</text>
+											<text id="ts6129" x="0" y="44.453125" class="s5">(04.12.1883 - 14.11.1953)</text>
+											<text id="ts6130" x="35.7919921875" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6131" x="16.787109375" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6125" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6132" class="s8" x="0.5" y="0.5" width="145.390625" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g112" transform="translate(166.390625,0)">
+								<g id="g113" at:id="1048" class="s3" onclick="nodeclick(1048)">
+									<g id="g6133" clip-path="url(#g6144)">
+										<rect id="r6134" class="s9" x="0.5" y="0.5" width="111.921867370605" height="85.421875" rx="10" ry="10"/>
+										<g id="t6136" transform="translate(3,3)">
+											<text id="ts6137" x="26.830078125" y="11.484375" class="s5">Камалова</text>
+											<text id="ts6138" x="11.9912109375" y="27.96875" class="s5">(Хафизуллина)</text>
+											<text id="ts6139" x="17.408203125" y="44.453125" class="s5">Шамсижихан</text>
+											<text id="ts6140" x="0" y="60.9375" class="s5">(20.01.1891 - 1959)</text>
+											<text id="ts6141" x="24.1904296875" y="77.421875" class="s5">Кичкальня</text>
+										</g>
+										<polygon id="p6135" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6142" class="s8" x="0.5" y="0.5" width="111.921867370605" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6144">
+											<rect id="r6145" class="s0" x="0.5" y="0.5" width="111.921867370605" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g114" transform="translate(565.05078125,0)">
+						<g id="g115">
+							<g id="g118">
+								<g id="g119" at:id="86" class="s3" onclick="nodeclick(86)">
+									<g id="g6146">
+										<rect id="r6147" class="s4" x="0.5" y="0.5" width="39" height="34"/>
+										<g id="t6149" transform="translate(3,3)">
+											<text id="ts6150" x="11.55078125" y="11.484375" class="s5">...</text>
+										</g>
+										<polygon id="p6148" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6151" class="s8" x="0.5" y="0.5" width="39" height="34"/>
+								</g>
+							</g>
+							<g id="g116" transform="translate(60,0)">
+								<g id="g117" at:id="1036" class="s3" onclick="nodeclick(1036)">
+									<g id="g6152" clip-path="url(#g6163)">
+										<rect id="r6153" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6155" transform="translate(3,3)">
+											<text id="ts6156" x="22.970703125" y="11.484375" class="s5">Камалетдинова</text>
+											<text id="ts6157" x="19.9208984375" y="27.96875" class="s5">Хадича(Актутэй)</text>
+											<text id="ts6158" x="22.466796875" y="44.453125" class="s5">(24.01.1886 - ?)</text>
+											<text id="ts6159" x="31.2646484375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6160" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6154" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6161" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6163">
+											<rect id="r6164" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g120" transform="translate(782.38671875,0)">
+						<g id="g121">
+							<g id="g122">
+								<g id="g123" at:id="1030" class="s3" onclick="nodeclick(1030)">
+									<g id="g6165">
+										<rect id="r6166" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6168" transform="translate(3,3)">
+											<text id="ts6169" x="13.8603515625" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6170" x="8.009765625" y="27.96875" class="s5">Мухаммадшакир</text>
+											<text id="ts6171" x="10.20703125" y="44.453125" class="s5">(03.10.1888 - ?)</text>
+											<text id="ts6172" x="19.0048828125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6173" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6167" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6174" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g124" transform="translate(915.203125,0)">
+						<g id="g125">
+							<g id="g126">
+								<g id="g127" at:id="1032" class="s3" onclick="nodeclick(1032)">
+									<g id="g6175">
+										<rect id="r6176" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6178" transform="translate(3,3)">
+											<text id="ts6179" x="13.8603515625" y="11.484375" class="s5">Камалетдинов</text>
+											<text id="ts6180" x="21.33984375" y="27.96875" class="s5">Сахабутдин</text>
+											<text id="ts6181" x="26.94140625" y="44.453125" class="s5">(1891 - ?)</text>
+											<text id="ts6182" x="19.0048828125" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6183" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6177" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6184" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g128" transform="translate(1048.01953125,0)">
+						<g id="g129">
+							<g id="g132">
+								<g id="g133" at:id="1434" class="s3" onclick="nodeclick(1434)">
+									<g id="g6185">
+										<rect id="r6186" class="s4" x="0.5" y="0.5" width="139.5546875" height="52.453125"/>
+										<g id="t6188" transform="translate(3,3)">
+											<text id="ts6189" x="9" y="11.484375" class="s5">Мухамадеев Хуснулгат</text>
+											<text id="ts6190" x="30.55078125" y="27.96875" class="s5">(1887 - 1936)</text>
+											<text id="ts6191" x="32.8740234375" y="44.453125" class="s5">Старая Амзя</text>
+										</g>
+										<polygon id="p6187" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6192" class="s8" x="0.5" y="0.5" width="139.5546875" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g130" transform="translate(160.5546875,0)">
+								<g id="g131" at:id="1034" class="s3" onclick="nodeclick(1034)">
+									<g id="g6193" clip-path="url(#g6203)">
+										<rect id="r6194" class="s9" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										<g id="t6196" transform="translate(3,3)">
+											<text id="ts6197" x="13" y="11.484375" class="s5">Камалетдинова Зухра</text>
+											<text id="ts6198" x="0" y="27.96875" class="s5">(04.02.1894 - 16.03.1986)</text>
+											<text id="ts6199" x="35.7919921875" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts6200" x="4.52734375" y="60.9375" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6195" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6201" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6203">
+											<rect id="r6204" class="s0" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g134" transform="translate(1374.96484375,0)">
+						<g id="g135">
+							<g id="g136">
+								<g id="g137" at:id="1028" class="s3" onclick="nodeclick(1028)">
+									<g id="g6205">
+										<rect id="r6206" class="s4" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+										<g id="t6208" transform="translate(3,3)">
+											<text id="ts6209" x="15.2431640625" y="11.484375" class="s5">Камалетдинов Муса</text>
+											<text id="ts6210" x="0" y="27.96875" class="s5">(11.01.1879 - 01.04.1932)</text>
+											<text id="ts6211" x="35.7919921875" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts6212" x="48.85546875" y="60.9375" class="s6">Прадед</text>
+										</g>
+										<polygon id="p6207" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6213" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g295" transform="translate(5609.6123046875,0)">
+					<g id="g410">
+						<g id="g411">
+							<g id="g412">
+								<g id="g413" at:id="1495" class="s3" onclick="nodeclick(1495)">
+									<g id="g6214" clip-path="url(#g6225)">
+										<rect id="r6215" class="s9" x="0.5" y="0.5" width="114.57421875" height="85.421875" rx="10" ry="10"/>
+										<g id="t6217" transform="translate(3,3)">
+											<text id="ts6218" x="13" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6219" x="31.162109375" y="27.96875" class="s5">Камалия</text>
+											<text id="ts6220" x="28.3203125" y="44.453125" class="s5">(1879 - ?)</text>
+											<text id="ts6221" x="20.3837890625" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6222" x="19.96484375" y="77.421875" class="s6">Прабабушка</text>
+										</g>
+										<polygon id="p6216" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6223" class="s8" x="0.5" y="0.5" width="114.57421875" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6225">
+											<rect id="r6226" class="s0" x="0.5" y="0.5" width="114.57421875" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g414" transform="translate(135.57421875,0)">
+						<g id="g415">
+							<g id="g416">
+								<g id="g417" at:id="1493" class="s3" onclick="nodeclick(1493)">
+									<g id="g6227" clip-path="url(#g6238)">
+										<rect id="r6228" class="s9" x="0.5" y="0.5" width="145.517578125" height="85.421875" rx="10" ry="10"/>
+										<g id="t6230" transform="translate(3,3)">
+											<text id="ts6231" x="13" y="11.484375" class="s5">Мухаммедсафина Биби</text>
+											<text id="ts6232" x="46.6484375" y="27.96875" class="s5">Камария</text>
+											<text id="ts6233" x="27.0576171875" y="44.453125" class="s5">(24.08.1877 - ?)</text>
+											<text id="ts6234" x="35.46875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6235" x="4.5908203125" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6229" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6236" class="s8" x="0.5" y="0.5" width="145.517578125" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6238">
+											<rect id="r6239" class="s0" x="0.5" y="0.5" width="145.517578125" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g418" transform="translate(302.091796875,0)">
+						<g id="g419">
+							<g id="g420">
+								<g id="g421" at:id="1491" class="s3" onclick="nodeclick(1491)">
+									<g id="g6240">
+										<rect id="r6241" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6243" transform="translate(3,3)">
+											<text id="ts6244" x="9" y="11.484375" class="s5">Мухаммедсафин</text>
+											<text id="ts6245" x="29.3701171875" y="27.96875" class="s5">Мустафа</text>
+											<text id="ts6246" x="10.20703125" y="44.453125" class="s5">(22.09.1881 - ?)</text>
+											<text id="ts6247" x="18.6181640625" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6248" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6242" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6249" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g422" transform="translate(434.908203125,0)">
+						<g id="g423">
+							<g id="g426">
+								<g id="g427" at:id="877" class="s3" onclick="nodeclick(877)">
+									<g id="g6250">
+										<rect id="r6251" class="s4" x="0.5" y="0.5" width="91.291015625" height="35.96875"/>
+										<g id="t6253" transform="translate(3,3)">
+											<text id="ts6254" x="9" y="11.484375" class="s5">Залялетдинов</text>
+											<text id="ts6255" x="8.7890625" y="27.96875" class="s5">Шихабутдин</text>
+										</g>
+										<polygon id="p6252" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6256" class="s8" x="0.5" y="0.5" width="91.291015625" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g424" transform="translate(112.291015625,0)">
+								<g id="g425" at:id="1494" class="s3" onclick="nodeclick(1494)">
+									<g id="g6257" clip-path="url(#g6268)">
+										<rect id="r6258" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6260" transform="translate(3,3)">
+											<text id="ts6261" x="17.380859375" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6262" x="40.2939453125" y="27.96875" class="s5">Жамалия</text>
+											<text id="ts6263" x="22.466796875" y="44.453125" class="s5">(04.03.1883 - ?)</text>
+											<text id="ts6264" x="30.8779296875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6265" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6259" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6266" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6268">
+											<rect id="r6269" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g472" transform="translate(6324.1474609375,0)">
+					<g id="g473">
+						<g id="g474">
+							<g id="g475">
+								<g id="g476" at:id="1497" class="s3" onclick="nodeclick(1497)">
+									<g id="g6270" clip-path="url(#g6281)">
+										<rect id="r6271" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6273" transform="translate(3,3)">
+											<text id="ts6274" x="17.380859375" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6275" x="35.568359375" y="27.96875" class="s5">Минсахиба</text>
+											<text id="ts6276" x="22.466796875" y="44.453125" class="s5">(12.06.1864 - ?)</text>
+											<text id="ts6277" x="30.8779296875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6278" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6272" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6279" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6281">
+											<rect id="r6282" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g477" transform="translate(157.3359375,0)">
+						<g id="g478">
+							<g id="g483">
+								<g id="g484" at:id="628" class="s3" onclick="nodeclick(628)">
+									<g id="g6283" clip-path="url(#g6290)">
+										<rect id="r6284" class="s9" x="0.5" y="0.5" width="124.693359375" height="34" rx="10" ry="10"/>
+										<g id="t6286" transform="translate(3,3)">
+											<text id="ts6287" x="13" y="11.484375" class="s5">Гатауллина Хадича</text>
+										</g>
+										<polygon id="p6285" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6288" class="s8" x="0.5" y="0.5" width="124.693359375" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6290">
+											<rect id="r6291" class="s0" x="0.5" y="0.5" width="124.693359375" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g479" transform="translate(145.693359375,0)">
+								<g id="g480" at:id="1492" class="s3" onclick="nodeclick(1492)">
+									<g id="g6292">
+										<rect id="r6293" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6295" transform="translate(3,3)">
+											<text id="ts6296" x="9" y="11.484375" class="s5">Мухаммедсафин</text>
+											<text id="ts6297" x="25.916015625" y="27.96875" class="s5">Сафиулла</text>
+											<text id="ts6298" x="10.20703125" y="44.453125" class="s5">(24.05.1867 - ?)</text>
+											<text id="ts6299" x="18.6181640625" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6300" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6294" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6301" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g481" transform="translate(278.509765625,0)">
+								<g id="g482" at:id="627" class="s3" onclick="nodeclick(627)">
+									<g id="g6302" clip-path="url(#g6309)">
+										<rect id="r6303" class="s9" x="0.5" y="0.5" width="126.76171875" height="34" rx="10" ry="10"/>
+										<g id="t6305" transform="translate(3,3)">
+											<text id="ts6306" x="13" y="11.484375" class="s5">Гатауллина Фатима</text>
+										</g>
+										<polygon id="p6304" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6307" class="s8" x="0.5" y="0.5" width="126.76171875" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6309">
+											<rect id="r6310" class="s0" x="0.5" y="0.5" width="126.76171875" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g485" transform="translate(583.607421875,0)">
+						<g id="g486">
+							<g id="g487">
+								<g id="g488" at:id="1498" class="s3" onclick="nodeclick(1498)">
+									<g id="g6311" clip-path="url(#g6322)">
+										<rect id="r6312" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6314" transform="translate(3,3)">
+											<text id="ts6315" x="17.380859375" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6316" x="41.041015625" y="27.96875" class="s5">Минсылу</text>
+											<text id="ts6317" x="22.466796875" y="44.453125" class="s5">(07.04.1870 - ?)</text>
+											<text id="ts6318" x="30.8779296875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6319" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6313" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6320" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6322">
+											<rect id="r6323" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g489" transform="translate(740.943359375,0)">
+						<g id="g490">
+							<g id="g491">
+								<g id="g492" at:id="1499" class="s3" onclick="nodeclick(1499)">
+									<g id="g6324" clip-path="url(#g6335)">
+										<rect id="r6325" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6327" transform="translate(3,3)">
+											<text id="ts6328" x="17.380859375" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6329" x="32.83203125" y="27.96875" class="s5">Хабибзямал</text>
+											<text id="ts6330" x="22.466796875" y="44.453125" class="s5">(28.10.1871 - ?)</text>
+											<text id="ts6331" x="30.8779296875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6332" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6326" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6333" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6335">
+											<rect id="r6336" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g493" transform="translate(898.279296875,0)">
+						<g id="g494">
+							<g id="g495">
+								<g id="g496" at:id="1496" class="s3" onclick="nodeclick(1496)">
+									<g id="g6337" clip-path="url(#g6348)">
+										<rect id="r6338" class="s9" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6340" transform="translate(3,3)">
+											<text id="ts6341" x="17.380859375" y="11.484375" class="s5">Мухаммедсафина</text>
+											<text id="ts6342" x="30.95703125" y="27.96875" class="s5">Минлегайша</text>
+											<text id="ts6343" x="22.466796875" y="44.453125" class="s5">(17.02.1874 - ?)</text>
+											<text id="ts6344" x="30.8779296875" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6345" x="0" y="77.421875" class="s6">2-юродная прабабушка</text>
+										</g>
+										<polygon id="p6339" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6346" class="s8" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6348">
+											<rect id="r6349" class="s0" x="0.5" y="0.5" width="136.3359375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g497" transform="translate(1055.615234375,0)">
+						<g id="g498">
+							<g id="g499">
+								<g id="g500" at:id="1457" class="s3" onclick="nodeclick(1457)">
+									<g id="g6350">
+										<rect id="r6351" class="s4" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+										<g id="t6353" transform="translate(3,3)">
+											<text id="ts6354" x="12.650390625" y="11.484375" class="s5">Мухаметсафин</text>
+											<text id="ts6355" x="18.65625" y="27.96875" class="s5">Мухаметъша</text>
+											<text id="ts6356" x="18.57421875" y="44.453125" class="s5">(02.1850 - ?)</text>
+											<text id="ts6357" x="18.6181640625" y="60.9375" class="s5">старый Амзя</text>
+											<text id="ts6358" x="0" y="77.421875" class="s6">2-юродный прадед</text>
+										</g>
+										<polygon id="p6352" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6359" class="s8" x="0.5" y="0.5" width="111.81640625" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g501" transform="translate(132.81640625,0)">
+								<g id="g502" at:id="759" class="s3" onclick="nodeclick(759)">
+									<g id="g6360" clip-path="url(#g6368)">
+										<rect id="r6361" class="s9" x="0.5" y="0.5" width="80.64453125" height="35.96875" rx="10" ry="10"/>
+										<g id="t6363" transform="translate(3,3)">
+											<text id="ts6364" x="13" y="11.484375" class="s5">Гусманова</text>
+											<text id="ts6365" x="0" y="27.96875" class="s5">Махрыйзямал</text>
+										</g>
+										<polygon id="p6362" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6366" class="s8" x="0.5" y="0.5" width="80.64453125" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6368">
+											<rect id="r6369" class="s0" x="0.5" y="0.5" width="80.64453125" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g10" transform="translate(0,841.4375)">
+				<g id="g11" transform="translate(3565.77416992188,0)">
+					<g id="g138">
+						<g id="g139">
+							<g id="g140">
+								<g id="g141" at:id="1416" class="s3" onclick="nodeclick(1416)">
+									<g id="g6370" clip-path="url(#g6378)">
+										<rect id="r6371" class="s9" x="0.5" y="0.5" width="116.644523620605" height="35.96875" rx="10" ry="10"/>
+										<g id="t6373" transform="translate(3,3)">
+											<text id="ts6374" x="13" y="11.484375" class="s5">Мусина Зулейха</text>
+											<text id="ts6375" x="0" y="27.96875" class="s6">2-юродная бабушка</text>
+										</g>
+										<polygon id="p6372" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6376" class="s8" x="0.5" y="0.5" width="116.644523620605" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6378">
+											<rect id="r6379" class="s0" x="0.5" y="0.5" width="116.644523620605" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g142" transform="translate(137.64453125,0)">
+						<g id="g143">
+							<g id="g146">
+								<g id="g147" at:id="1219" class="s3" onclick="nodeclick(1219)">
+									<g id="g6380">
+										<rect id="r6381" class="s4" x="0.5" y="0.5" width="119.36328125" height="34"/>
+										<g id="t6383" transform="translate(3,3)">
+											<text id="ts6384" x="9" y="11.484375" class="s5">Махмутов Мустафа</text>
+										</g>
+										<polygon id="p6382" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6385" class="s8" x="0.5" y="0.5" width="119.36328125" height="34"/>
+								</g>
+							</g>
+							<g id="g144" transform="translate(140.36328125,0)">
+								<g id="g145" at:id="1415" class="s3" onclick="nodeclick(1415)">
+									<g id="g6386" clip-path="url(#g6395)">
+										<rect id="r6387" class="s9" x="0.5" y="0.5" width="116.644523620605" height="52.453125" rx="10" ry="10"/>
+										<g id="t6389" transform="translate(3,3)">
+											<text id="ts6390" x="13" y="11.484375" class="s5">Мусина Зельхюбя</text>
+											<text id="ts6391" x="2.361328125" y="27.96875" class="s5">(26.12.1900 - 1963)</text>
+											<text id="ts6392" x="0" y="44.453125" class="s6">2-юродная бабушка</text>
+										</g>
+										<polygon id="p6388" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6393" class="s8" x="0.5" y="0.5" width="116.644523620605" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6395">
+											<rect id="r6396" class="s0" x="0.5" y="0.5" width="116.644523620605" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g148" transform="translate(415.65234375,0)">
+						<g id="g149">
+							<g id="g150">
+								<g id="g151" at:id="1044" class="s3" onclick="nodeclick(1044)">
+									<g id="g6397" clip-path="url(#g6407)">
+										<rect id="r6398" class="s9" x="0.5" y="0.5" width="124.775382995605" height="68.9375" rx="10" ry="10"/>
+										<g id="t6400" transform="translate(3,3)">
+											<text id="ts6401" x="13" y="11.484375" class="s5">Камалова (Мусина)</text>
+											<text id="ts6402" x="40.3173828125" y="27.96875" class="s5">Зайняб</text>
+											<text id="ts6403" x="16.6865234375" y="44.453125" class="s5">(14.01.1903 - ?)</text>
+											<text id="ts6404" x="4.0654296875" y="60.9375" class="s6">2-юродная бабушка</text>
+										</g>
+										<polygon id="p6399" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6405" class="s8" x="0.5" y="0.5" width="124.775382995605" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6407">
+											<rect id="r6408" class="s0" x="0.5" y="0.5" width="124.775382995605" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g152" transform="translate(561.427734375,0)">
+						<g id="g153">
+							<g id="g156">
+								<g id="g157" at:id="1230" class="s3" onclick="nodeclick(1230)">
+									<g id="g6409">
+										<rect id="r6410" class="s4" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+										<g id="t6412" transform="translate(3,3)">
+											<text id="ts6413" x="19.8779296875" y="11.484375" class="s5">Махмутов Хузязян</text>
+											<text id="ts6414" x="0" y="27.96875" class="s5">(13.12.1900 - 05.09.1978)</text>
+											<text id="ts6415" x="38.2060546875" y="44.453125" class="s5">Новая Амзя</text>
+										</g>
+										<polygon id="p6411" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6416" class="s8" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g154" transform="translate(166.390625,0)">
+								<g id="g155" at:id="1239" class="s3" onclick="nodeclick(1239)">
+									<g id="g6417" clip-path="url(#g6428)">
+										<rect id="r6418" class="s9" x="0.5" y="0.5" width="131.349609375" height="85.421875" rx="10" ry="10"/>
+										<g id="t6420" transform="translate(3,3)">
+											<text id="ts6421" x="13" y="11.484375" class="s5">Махмутова (Мусина)</text>
+											<text id="ts6422" x="45.171875" y="27.96875" class="s5">Фаима</text>
+											<text id="ts6423" x="26.4482421875" y="44.453125" class="s5">(1905 - 1988)</text>
+											<text id="ts6424" x="28.771484375" y="60.9375" class="s5">Старая Амзя</text>
+											<text id="ts6425" x="7.3525390625" y="77.421875" class="s6">2-юродная бабушка</text>
+										</g>
+										<polygon id="p6419" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6426" class="s8" x="0.5" y="0.5" width="131.349609375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6428">
+											<rect id="r6429" class="s0" x="0.5" y="0.5" width="131.349609375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g158" transform="translate(880.16796875,0)">
+						<g id="g159">
+							<g id="g160">
+								<g id="g161" at:id="1402" class="s3" onclick="nodeclick(1402)">
+									<g id="g6430">
+										<rect id="r6431" class="s4" x="0.5" y="0.5" width="111.921867370605" height="52.453125"/>
+										<g id="t6433" transform="translate(3,3)">
+											<text id="ts6434" x="16.41796875" y="11.484375" class="s5">Мусин Шагид</text>
+											<text id="ts6435" x="0" y="27.96875" class="s5">(27.07.1911 - 1961)</text>
+											<text id="ts6436" x="9.8984375" y="44.453125" class="s6">2-юродный дед</text>
+										</g>
+										<polygon id="p6432" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6437" class="s8" x="0.5" y="0.5" width="111.921867370605" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g162" transform="translate(132.921875,0)">
+								<g id="g163" at:id="1406" class="s3" onclick="nodeclick(1406)">
+									<g id="g6438" clip-path="url(#g6447)">
+										<rect id="r6439" class="s9" x="0.5" y="0.5" width="111.921867370605" height="52.453125" rx="10" ry="10"/>
+										<g id="t6441" transform="translate(3,3)">
+											<text id="ts6442" x="13" y="11.484375" class="s5">Мусина (Алиева)</text>
+											<text id="ts6443" x="22.5615234375" y="27.96875" class="s5">Зинат-бану</text>
+											<text id="ts6444" x="0" y="44.453125" class="s5">(1915 - 22.03.2007)</text>
+										</g>
+										<polygon id="p6440" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6445" class="s8" x="0.5" y="0.5" width="111.921867370605" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6447">
+											<rect id="r6448" class="s0" x="0.5" y="0.5" width="111.921867370605" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g164" transform="translate(1146.01171875,0)">
+						<g id="g165">
+							<g id="g166">
+								<g id="g167" at:id="1403" class="s3" onclick="nodeclick(1403)">
+									<g id="g6449">
+										<rect id="r6450" class="s4" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+										<g id="t6452" transform="translate(3,3)">
+											<text id="ts6453" x="32.6865234375" y="11.484375" class="s5">Мусин Шакир</text>
+											<text id="ts6454" x="0" y="27.96875" class="s5">(11.04.1914 - 19.12.1943)</text>
+											<text id="ts6455" x="35.7919921875" y="44.453125" class="s5">Старая Амзя</text>
+											<text id="ts6456" x="26.6328125" y="60.9375" class="s6">2-юродный дед</text>
+										</g>
+										<polygon id="p6451" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6457" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g168" transform="translate(166.390625,0)">
+								<g id="g169" at:id="1425" class="s3" onclick="nodeclick(1425)">
+									<g id="g6458" clip-path="url(#g6468)">
+										<rect id="r6459" class="s9" x="0.5" y="0.5" width="113.953125" height="68.9375" rx="10" ry="10"/>
+										<g id="t6461" transform="translate(3,3)">
+											<text id="ts6462" x="13" y="11.484375" class="s5">Мусина (Сафина)</text>
+											<text id="ts6463" x="35.2138671875" y="27.96875" class="s5">Халиса</text>
+											<text id="ts6464" x="17.75" y="44.453125" class="s5">(1918 - 2004)</text>
+											<text id="ts6465" x="20.0732421875" y="60.9375" class="s5">Старая Амзя</text>
+										</g>
+										<polygon id="p6460" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6466" class="s8" x="0.5" y="0.5" width="113.953125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6468">
+											<rect id="r6469" class="s0" x="0.5" y="0.5" width="113.953125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g170" transform="translate(1447.35546875,0)">
+						<g id="g171">
+							<g id="g174">
+								<g id="g175" at:id="1088" class="s3" onclick="nodeclick(1088)">
+									<g id="g6470">
+										<rect id="r6471" class="s4" x="0.5" y="0.5" width="128.84375" height="34"/>
+										<g id="t6472" transform="translate(3,3)">
+											<text id="ts6473" x="0" y="11.484375" class="s5">Кузюров Хабибрахман</text>
+										</g>
+									</g>
+									<rect id="r6474" class="s8" x="0.5" y="0.5" width="128.84375" height="34"/>
+								</g>
+							</g>
+							<g id="g172" transform="translate(149.84375,0)">
+								<g id="g173" at:id="1090" class="s3" onclick="nodeclick(1090)">
+									<g id="g6475" clip-path="url(#g6485)">
+										<rect id="r6476" class="s9" x="0.5" y="0.5" width="125.091789245605" height="68.9375" rx="10" ry="10"/>
+										<g id="t6478" transform="translate(3,3)">
+											<text id="ts6479" x="13" y="11.484375" class="s5">Кузюрова (Мусина)</text>
+											<text id="ts6480" x="39.224609375" y="27.96875" class="s5">Фатимя</text>
+											<text id="ts6481" x="16.8447265625" y="44.453125" class="s5">(07.07.1907 - ?)</text>
+											<text id="ts6482" x="35.5029296875" y="60.9375" class="s6">Бабушка</text>
+										</g>
+										<polygon id="p6477" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6483" class="s8" x="0.5" y="0.5" width="125.091789245605" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6485">
+											<rect id="r6486" class="s0" x="0.5" y="0.5" width="125.091789245605" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g503" transform="translate(5468.669921875,0)">
+					<g id="g504">
+						<g id="g505">
+							<g id="g506">
+								<g id="g507" at:id="2170" class="s3" onclick="nodeclick(2170)">
+									<g id="g6487">
+										<rect id="r6488" class="s4" x="0.5" y="0.5" width="86.94921875" height="52.453125"/>
+										<g id="t6490" transform="translate(3,3)">
+											<text id="ts6491" x="9" y="11.484375" class="s5">Шарифуллин</text>
+											<text id="ts6492" x="11.666015625" y="27.96875" class="s5">Валиахмет</text>
+											<text id="ts6493" x="29.400390625" y="44.453125" class="s6">Дед</text>
+										</g>
+										<polygon id="p6489" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6494" class="s8" x="0.5" y="0.5" width="86.94921875" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g8" transform="translate(0,952.859375)">
+				<g id="g176" transform="translate(5103.04296875,0)">
+					<g id="g177">
+						<g id="g178">
+							<g id="g179">
+								<g id="g180" at:id="1087" class="s3" onclick="nodeclick(1087)">
+									<g id="g6495">
+										<rect id="r6496" class="s4" x="0.5" y="0.5" width="98.861328125" height="35.96875"/>
+										<g id="t6498" transform="translate(3,3)">
+											<text id="ts6499" x="9" y="11.484375" class="s5">Кузюров Наиль</text>
+											<text id="ts6500" x="32.4345703125" y="27.96875" class="s6">Дядя</text>
+										</g>
+										<polygon id="p6497" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6501" class="s8" x="0.5" y="0.5" width="98.861328125" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g181" transform="translate(119.861328125,0)">
+								<g id="g182" at:id="1089" class="s3" onclick="nodeclick(1089)">
+									<g id="g6502" clip-path="url(#g6513)">
+										<rect id="r6503" class="s9" x="0.5" y="0.5" width="145.390625" height="85.421875" rx="10" ry="10"/>
+										<g id="t6505" transform="translate(3,3)">
+											<text id="ts6506" x="43.40625" y="11.484375" class="s5">Кузюрова</text>
+											<text id="ts6507" x="10.8955078125" y="27.96875" class="s5">(Зайнуллина) Рамиля</text>
+											<text id="ts6508" x="0" y="44.453125" class="s5">(29.03.1948 - 07.01.2024)</text>
+											<text id="ts6509" x="10.6611328125" y="60.9375" class="s5">Янгиюль(Узбекистан)</text>
+											<text id="ts6510" x="56.853515625" y="77.421875" class="s6">Тётя</text>
+										</g>
+										<polygon id="p6504" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6511" class="s8" x="0.5" y="0.5" width="145.390625" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6513">
+											<rect id="r6514" class="s0" x="0.5" y="0.5" width="145.390625" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g9" transform="translate(5399.294921875,0)">
+					<g id="g183">
+						<g id="g184">
+							<g id="g185">
+								<g id="g186" at:id="2175" class="s3" onclick="nodeclick(2175)">
+									<g id="g6515">
+										<rect id="r6516" class="s4" x="0.5" y="0.5" width="117.75" height="52.453125"/>
+										<g id="t6518" transform="translate(3,3)">
+											<text id="ts6519" x="9" y="11.484375" class="s5">Шарифуллин Ирек</text>
+											<text id="ts6520" x="2.9140625" y="27.96875" class="s5">(1937 - 13.06.2019)</text>
+											<text id="ts6521" x="41.7734375" y="44.453125" class="s6">Отец</text>
+										</g>
+										<polygon id="p6517" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r6522" class="s8" x="0.5" y="0.5" width="117.75" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g508" transform="translate(5548.044921875,0)">
+					<g id="g509">
+						<g id="g510">
+							<g id="g511">
+								<g id="g512" at:id="2180" class="s3" onclick="nodeclick(2180)">
+									<g id="g6523" clip-path="url(#g6532)">
+										<rect id="r6524" class="s9" x="0.5" y="0.5" width="145.390625" height="52.453125" rx="10" ry="10"/>
+										<g id="t6526" transform="translate(3,3)">
+											<text id="ts6527" x="13" y="11.484375" class="s5">Шарифуллина Сания</text>
+											<text id="ts6528" x="0" y="27.96875" class="s5">(01.09.1936 - 09.11.2015)</text>
+											<text id="ts6529" x="55.634765625" y="44.453125" class="s6">Мать</text>
+										</g>
+										<polygon id="p6525" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r6530" class="s8" x="0.5" y="0.5" width="145.390625" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6532">
+											<rect id="r6533" class="s0" x="0.5" y="0.5" width="145.390625" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g6" transform="translate(0,1064.28125)">
+				<g id="g7" transform="translate(5117.53125,0)">
+					<g id="g187">
+						<g id="g188">
+							<g id="g189">
+								<g id="g190" at:id="2172" class="s3" onclick="nodeclick(2172)">
+									<g id="g6534">
+										<rect id="r6535" class="s4" x="0.5" y="0.5" width="120.6171875" height="52.453125"/>
+										<g id="t6536" transform="translate(3,3)">
+											<text id="ts6537" x="0" y="11.484375" class="s5">Шарифуллин Ильдус</text>
+											<text id="ts6538" x="23.37890625" y="27.96875" class="s5">(03.02.1963)</text>
+											<text id="ts6539" x="43.90625" y="44.453125" class="s6">Брат</text>
+										</g>
+									</g>
+									<rect id="r6540" class="s8" x="0.5" y="0.5" width="120.6171875" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g191" transform="translate(141.6171875,0)">
+								<g id="g192" at:id="2179" class="s3" onclick="nodeclick(2179)">
+									<g id="g6541" clip-path="url(#g6548)">
+										<rect id="r6542" class="s9" x="0.5" y="0.5" width="130.02734375" height="35.96875" rx="10" ry="10"/>
+										<g id="t6543" transform="translate(3,3)">
+											<text id="ts6544" x="0" y="11.484375" class="s5">Шарифуллина Сажида</text>
+											<text id="ts6545" x="39.423828125" y="27.96875" class="s6">Ятровка</text>
+										</g>
+									</g>
+									<rect id="r6546" class="s8" x="0.5" y="0.5" width="130.02734375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6548">
+											<rect id="r6549" class="s0" x="0.5" y="0.5" width="130.02734375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g193" transform="translate(292.64453125,0)">
+						<g id="g194">
+							<g id="g195">
+								<g id="g196" at:id="2173" class="s3" onclick="nodeclick(2173)">
+									<g id="g6550">
+										<rect id="r6551" class="s4" x="0.5" y="0.5" width="122.310546875" height="68.9375"/>
+										<g id="t6552" transform="translate(3,3)">
+											<text id="ts6553" x="0" y="11.484375" class="s5">Шарифуллин Ильхам</text>
+											<text id="ts6554" x="24.2255859375" y="27.96875" class="s5">(12.06.1966)</text>
+											<text id="ts6555" x="36.8818359375" y="44.453125" class="s5">Елабуга</text>
+											<text id="ts6556" x="44.7529296875" y="60.9375" class="s6">Брат</text>
+										</g>
+									</g>
+									<rect id="r6557" class="s8" x="0.5" y="0.5" width="122.310546875" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g197" transform="translate(143.310546875,0)">
+								<g id="g198" at:id="2177" class="s3" onclick="nodeclick(2177)">
+									<g id="g6558" clip-path="url(#g6567)">
+										<rect id="r6559" class="s9" x="0.5" y="0.5" width="122.017578125" height="68.9375" rx="10" ry="10"/>
+										<g id="t6560" transform="translate(3,3)">
+											<text id="ts6561" x="18.884765625" y="11.484375" class="s5">Шарифуллина</text>
+											<text id="ts6562" x="0" y="27.96875" class="s5">(Князьханова) Найля</text>
+											<text id="ts6563" x="24.0791015625" y="44.453125" class="s5">(27.08.1969)</text>
+											<text id="ts6564" x="35.4189453125" y="60.9375" class="s6">Ятровка</text>
+										</g>
+									</g>
+									<rect id="r6565" class="s8" x="0.5" y="0.5" width="122.017578125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6567">
+											<rect id="r6568" class="s0" x="0.5" y="0.5" width="122.017578125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g199" transform="translate(578.97265625,0)">
+						<g id="g200">
+							<g id="g203">
+								<g id="g204" at:id="399" class="s3" onclick="nodeclick(399)">
+									<g id="g6569">
+										<rect id="r6570" class="s4" x="0.5" y="0.5" width="101.457038879395" height="35.96875"/>
+										<g id="t6571" transform="translate(3,3)">
+											<text id="ts6572" x="0" y="11.484375" class="s5">Валиуллин Венер</text>
+											<text id="ts6573" x="9.509765625" y="27.96875" class="s6">Отец ребёнка</text>
+										</g>
+									</g>
+									<rect id="r6574" class="s8" x="0.5" y="0.5" width="101.457038879395" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g201" transform="translate(122.457038879395,0)">
+								<g id="g202" at:id="402" class="s3" onclick="nodeclick(402)">
+									<g id="g6575" clip-path="url(#g6584)">
+										<rect id="r6576" class="s10" x="0.5" y="0.5" width="136.578125" height="68.9375" rx="10" ry="10"/>
+										<g id="t6577" transform="translate(3,3)">
+											<text id="ts6578" x="32.8330078125" y="11.484375" class="s5">Валиуллина</text>
+											<text id="ts6579" x="0" y="27.96875" class="s5">(Шарифуллина) Венера</text>
+											<text id="ts6580" x="31.359375" y="44.453125" class="s5">(26.03.1972)</text>
+											<text id="ts6581" x="45.85546875" y="60.9375" class="s5">Москва</text>
+										</g>
+									</g>
+									<rect id="r6582" class="s8" x="0.5" y="0.5" width="136.578125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6584">
+											<rect id="r6585" class="s0" x="0.5" y="0.5" width="136.578125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g205" transform="translate(0,1159.21875)">
+				<g id="g206" transform="translate(5751.544921875,0)">
+					<g id="g207">
+						<g id="g208">
+							<g id="g209">
+								<g id="g210" at:id="403" class="s3" onclick="nodeclick(403)">
+									<g id="g6586" clip-path="url(#g6593)">
+										<rect id="r6587" class="s9" x="0.5" y="0.5" width="113.83203125" height="35.96875" rx="10" ry="10"/>
+										<g id="t6588" transform="translate(3,3)">
+											<text id="ts6589" x="0" y="11.484375" class="s5">Валиуллина Залина</text>
+											<text id="ts6590" x="39.810546875" y="27.96875" class="s6">Дочь</text>
+										</g>
+									</g>
+									<rect id="r6591" class="s8" x="0.5" y="0.5" width="113.83203125" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g6593">
+											<rect id="r6594" class="s0" x="0.5" y="0.5" width="113.83203125" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>
